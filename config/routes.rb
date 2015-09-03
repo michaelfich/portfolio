@@ -1,9 +1,6 @@
 Rails.application.routes.draw do
-  get 'users/new'
-
   root to: 'pages#home'
 
-  get '/login' => 'accounts#login', as: 'login'
-  get '/logout' => 'sessions#logout', as: 'logout'
-  get '/signup' => 'users#new', as: 'signup'
+  get "oauth/callback" => "oauths#callback"
+  get "oauth/:provider" => "oauths#oauth", as: :auth_at_provider
 end

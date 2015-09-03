@@ -122,12 +122,17 @@ Rails.application.config.sorcery.configure do |config|
   # config.facebook.access_permissions = ["email", "publish_actions"]
   # config.facebook.display = "page"
   # config.facebook.api_version = "v2.2"
-  #
-  config.github.key = Figuro.env.github_client_key
-  config.github.secret = Figuro.env.github_client_secret
-  config.github.callback_url = "http://localhost:3000/oauth/callback?provider=github"
-  config.github.user_info_mapping = {:email => "name"}
-  #
+
+  config.github.key = ENV['github_client_id']
+  config.github.secret = ENV['github_client_secret']
+  config.github.callback_url = ENV['github_callback_url']
+  config.github.user_info_mapping = {
+    login: "login",
+    email: "email",
+    name: "name",
+    avatar: "avatar_url",
+  }
+
   # config.google.key = ""
   # config.google.secret = ""
   # config.google.callback_url = "http://0.0.0.0:3000/oauth/callback?provider=google"
@@ -436,7 +441,7 @@ Rails.application.config.sorcery.configure do |config|
     # Class which holds the various external provider data for this user.
     # Default: `nil`
     #
-    # user.authentications_class =
+    user.authentications_class = Authentication
 
 
     # User's identifier in authentications class.
