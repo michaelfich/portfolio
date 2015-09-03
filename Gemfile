@@ -15,6 +15,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # gem 'capistrano-rails', group: :development
 gem 'figaro'
 gem 'sorcery', '~> 0.9.1'
+gem 'font-awesome-sass'
 
 group :development, :test do
   gem 'byebug'

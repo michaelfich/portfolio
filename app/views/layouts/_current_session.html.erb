@@ -1,7 +1,0 @@
-<div class="user">
-  <% if current_user %>
-    You are logged in as <%= link_to current_user.name, "https://github.com/#{current_user.login}" %>
-  <% else %>
-    <%= link_to "Log in with Github", auth_at_provider_path(provider: :github) %>
-  <% end %>
-</div>

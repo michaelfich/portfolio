@@ -3,4 +3,8 @@ Rails.application.routes.draw do
 
   get "oauth/callback" => "oauths#callback"
   get "oauth/:provider" => "oauths#oauth", as: :auth_at_provider
+
+  namespace :admin do
+    resources :footer
+  end
 end

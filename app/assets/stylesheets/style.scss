@@ -1,0 +1,16 @@
+.user {
+  img.avatar {
+    height: 40px;
+    width: 40px;
+    border-radius: 4px;
+  }
+}
+
+.container.outer {
+  margin: 0;
+  padding: 0;
+  > .container.inner {
+    width: 960px;
+    margin: 0 auto;
+  }
+}
