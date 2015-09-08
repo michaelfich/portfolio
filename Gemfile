@@ -21,4 +21,7 @@ group :development, :test do
   gem 'byebug'
   gem 'web-console', '~> 2.0'
   gem 'spring'
+
+  gem 'pry-rails', '~> 0.3.4'
+  gem 'quiet_assets', '~> 1.1.0'
 end

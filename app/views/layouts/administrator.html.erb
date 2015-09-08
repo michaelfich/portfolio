@@ -7,8 +7,8 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-  <%= render partial: 'shared/current_session' %>
   <%= render partial: 'shared/flash_messages' %>
+  <%= render partial: 'shared/current_session' %>
   <%= yield %>
 </body>
 </html>
