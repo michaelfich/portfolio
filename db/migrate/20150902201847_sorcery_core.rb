@@ -3,11 +3,9 @@ class SorceryCore < ActiveRecord::Migration
     create_table :users do |t|
       t.string :login
       t.string :name
-      t.string :email, :null => false
+      t.string :email, null: false
       t.string :avatar
-      t.string :crypted_password
-      t.string :salt
-
+      t.boolean :admin, default: false
       t.timestamps
     end
 

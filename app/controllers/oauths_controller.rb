@@ -8,16 +8,15 @@ class OauthsController < ApplicationController
   def callback
     provider = auth_params[:provider]
     if @user = login_from(provider)
-      redirect_back_or_to root_path, notice: "Logged in from #{provider.titleize}!"
+      redirect_back_or_to root_path, success: "Logged in from #{provider.titleize}!"
     else
       begin
         @user = create_from(provider)
-
-        # NOTE: this is the place to add '@user.activate!' if you are using user_activation submodule
-
+        @user.admin = (User.count == 1)
+        @user.save
         reset_session
         auto_login(@user)
-        redirect_back_or_to root_path, notice: "Created account and logged in from #{provider.titleize}!"
+        redirect_back_or_to root_path, success: "Registered from #{provider.titleize}!"
       rescue
         redirect_to root_path, alert: "Failed to login from #{provider.titleize}!"
       end

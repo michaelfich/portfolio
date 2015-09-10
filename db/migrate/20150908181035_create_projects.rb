@@ -5,8 +5,9 @@ class CreateProjects < ActiveRecord::Migration
       t.text :description
       t.string :url
       t.string :repo
-
-      t.timestamps null: false
+      t.string :image_preview
+      t.string :image_large
+      t.boolean :featured
     end
   end
 end

@@ -1,0 +1,32 @@
+<article class="project card">
+
+  <div class="card-image"></div>
+
+  <header class="title card-header">
+    <%= link_to project.title, project.url %>
+  </header>
+
+  <article class="description card-copy">
+    <article>
+      <%= project.description %>
+    </article>
+
+    <footer>
+      <ul class="links">
+        <li>
+          <%= link_to project.url, target: '_blank' do %>
+            <i class="fa fa-link"></i>
+            <span>Demo</span>
+          <% end %>
+        </li>
+        <li>
+          <%= link_to project.repo, target: '_blank' do %>
+            <i class="fa fa-github-square"></i>
+            <span>Github</span>
+          <% end %>
+        </li>
+      </ul>
+    </footer>
+  </article>
+
+</article>
