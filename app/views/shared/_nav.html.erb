@@ -1,0 +1,45 @@
+<header class="navigation" role="banner">
+  <div class="navigation-wrapper">
+    <a href="javascript:void(0)" class="navigation-menu-button" id="js-mobile-menu"><i class="fa fa-bars"></i></a>
+    <nav role="navigation">
+      <ul id="js-navigation-menu" class="navigation-menu show">
+
+        <li class="nav-link">
+          <%= link_to :root do %>
+            <i class="fa fa-home"></i>
+            <span>home</span>
+          <% end %>
+        </li>
+
+        <li class="nav-link">
+          <%= link_to 'http://blog.michaelfich.com' do %>
+            <i class="fa fa-rss"></i>
+            <span>blog</span>
+          <% end %>
+        </li>
+
+        <li class="nav-link">
+          <%= link_to 'about' do %>
+            <i class="fa fa-user"></i>
+            <span>about</span>
+          <% end %>
+        </li>
+
+        <li class="nav-link">
+          <%= link_to 'portfolio' do%>
+            <i class="fa fa-folder-open"></i>
+            <span>portfolio</span>
+          <% end %>
+        </li>
+
+        <li class="nav-link">
+          <%= link_to 'contact' do%>
+            <i class="fa fa-comment"></i>
+            <span>contact</span>
+          <% end %>
+        </li>
+
+      </ul>
+    </nav>
+  </div>
+</header>

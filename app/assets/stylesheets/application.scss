@@ -8,7 +8,10 @@
 @import 'neat';
 @import 'refills/base';
 
-#about,
-#portfolio {
+.wrapper {
   @include outer-container;
+  padding: 3em 0 2em;
 }
+
+@import 'headers';
+@import 'about';
