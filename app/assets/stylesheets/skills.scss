@@ -1,0 +1,12 @@
+#skills {
+  // padding-left: em(16);
+  // padding-right: em(16);
+
+  .back-end, .front-end {
+    @include span-columns(12);
+
+    @include media($large-screen) {
+      @include span-columns(6);
+    }
+  }
+}

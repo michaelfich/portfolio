@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
   root to: 'pages#home'
 
+  resources :projects, only: [:index, :show]
+
   get 'about' => 'pages#about', as: :about_me
   get 'portfolio' => 'pages#portfolio', as: :portfolio
   get 'contact' => 'pages#contact', as: :contact
