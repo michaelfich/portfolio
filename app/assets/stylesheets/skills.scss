@@ -1,6 +1,6 @@
 #skills {
-  // padding-left: em(16);
-  // padding-right: em(16);
+  padding-left: em(16);
+  padding-right: em(16);
 
   .back-end, .front-end {
     @include span-columns(12);
