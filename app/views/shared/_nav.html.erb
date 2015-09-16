@@ -1,45 +1,34 @@
-<header class="navigation" role="banner">
-  <div class="navigation-wrapper">
-    <a href="javascript:void(0)" class="navigation-menu-button" id="js-mobile-menu"><i class="fa fa-bars"></i></a>
-    <nav role="navigation">
-      <ul id="js-navigation-menu" class="navigation-menu show">
-
-        <li class="nav-link">
-          <%= link_to :root do %>
-            <i class="fa fa-home"></i>
-            <span>home</span>
-          <% end %>
-        </li>
-
-        <li class="nav-link">
-          <%= link_to 'http://blog.michaelfich.com' do %>
-            <i class="fa fa-rss"></i>
-            <span>blog</span>
-          <% end %>
-        </li>
-
-        <li class="nav-link">
-          <%= link_to 'about' do %>
-            <i class="fa fa-user"></i>
-            <span>about</span>
-          <% end %>
-        </li>
-
-        <li class="nav-link">
-          <%= link_to :projects do%>
-            <i class="fa fa-folder-open"></i>
-            <span>projects</span>
-          <% end %>
-        </li>
-
-        <li class="nav-link">
-          <%= link_to 'contact' do%>
-            <i class="fa fa-comment"></i>
-            <span>contact</span>
-          <% end %>
-        </li>
-
-      </ul>
-    </nav>
-  </div>
-</header>
+<nav role="navigation">
+  <ul>
+    <li>
+      <%= link_to :root do %>
+        <i class="fa fa-home"></i>
+        <span>Home</span>
+      <% end %>
+    </li>
+    <li>
+      <%= link_to blogs_path do %>
+        <i class="fa fa-rss"></i>
+        <span>Blog</span>
+      <% end %>
+    </li>
+    <li>
+      <%= link_to 'about' do %>
+        <i class="fa fa-user"></i>
+        <span>About</span>
+      <% end %>
+    </li>
+    <li>
+      <%= link_to :projects do%>
+        <i class="fa fa-folder-open"></i>
+        <span>Projects</span>
+      <% end %>
+    </li>
+    <li>
+      <%= link_to 'contact' do%>
+        <i class="fa fa-comment"></i>
+        <span>Contact</span>
+      <% end %>
+    </li>
+  </ul>
+</nav>

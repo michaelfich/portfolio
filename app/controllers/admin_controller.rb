@@ -1,5 +1,6 @@
 class AdminController < ApplicationController
-  layout 'administrator'
+  layout "administrator"
+  before_filter :is_admin?
 
   def index
   end

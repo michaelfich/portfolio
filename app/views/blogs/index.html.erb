@@ -1,0 +1,17 @@
+<h3>Blogs</h3>
+
+<section class="blogs">
+  <% @blogs.each do |blog| %>
+    <section class="blog">
+      <h4><%= link_to blog.title, blog %></h4>
+
+      <article>
+        <%= truncate(blog.body, length: 400) do %>
+          <%= link_to "Continue reading", blog  %>
+        <% end %>
+      </article>
+    </section>
+  <% end %>
+
+  <%= paginate @blogs %>
+</section>

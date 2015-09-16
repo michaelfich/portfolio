@@ -19,6 +19,7 @@ gem 'autoprefixer-rails'
 gem 'bourbon'
 gem 'neat'
 gem 'font-awesome-sass'
+gem 'kaminari', '~> 0.16.3'
 
 group :development, :test do
   gem 'byebug'

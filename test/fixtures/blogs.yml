@@ -2,12 +2,12 @@
 
 one:
   title: MyString
-  content: MyText
-  url: MyString
-  posted_at: 2015-09-11 12:49:40
+  body: MyText
+  user_id: 
+  published_at: 2015-09-15 17:24:15
 
 two:
   title: MyString
-  content: MyText
-  url: MyString
-  posted_at: 2015-09-11 12:49:40
+  body: MyText
+  user_id: 
+  published_at: 2015-09-15 17:24:15

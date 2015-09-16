@@ -1,0 +1,30 @@
+<h3>Blogs</h3>
+
+<p>
+  <%= link_to "New blog post", new_admin_blog_path %>
+</p>
+
+<% if @blogs.any? %>
+  <section class="blogs">
+    <% @blogs.each do |blog| %>
+      <section class="blog">
+        <header>
+          <h4><%= blog.title %></h4>
+          <aside><em><%= blog.published_at.strftime("%B %e, %Y") %></em></aside>
+        </header>
+        <article>
+          <%= truncate(blog.body, length: 250) %>
+        </article>
+        <footer>
+          <%= link_to "Show", admin_blog_path(blog) %>
+          <%= link_to "Edit", edit_admin_blog_path(blog) %>
+          <%= link_to "Delete", blog, method: :delete %>
+        </footer>
+      </section>
+    <% end %>
+  </section>
+<% else %>
+  <section class="blogs">
+    <p>There aren't any blogs published yet.</p>
+  </section>
+<% end %>

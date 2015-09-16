@@ -1,29 +1,16 @@
-<div id="projects" class="wrapper">
+<div id="projects">
   <h1>My Projects</h1>
 
   <% @projects.each do |project| %>
-    <%= link_to project do %>
-      <section class="project ribbon-box">
-        <aside class="preview">
-          <%= image_tag("https://robohash.org/#{project.title}") %>
-        </aside>
-
-        <section class="content">
-          <header class="title">
-            <%= project.title %>
-          </header>
-
-          <article class="description">
-            <%= project.description %>
-          </article>
-
-          <% unless project.completed? %>
-            <div class="ribbon-wrapper">
-              <div class="ribbon">In Development</div>
-            </div>
-          <% end %>
-        </section>
+    <section class="project ribbon-box">
+      <section class="content">
+        <header class="title">
+          <h3><%= project.title %></h3>
+        </header>
+        <article class="description">
+          <%= project.description %>
+        </article>
       </section>
-    <% end %>
+    </section>
   <% end %>
 </div>

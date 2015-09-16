@@ -1,0 +1,13 @@
+<%= form_for @blog, url: url_for(controller: 'admin/blogs', action: :create) do |f| %>
+  <div class="field">
+    <%= f.label :title, "Title" %>
+    <%= f.text_field :title %>
+  </div>
+  <div class="field">
+    <%= f.label :body, "Content" %>
+    <%= f.text_area :body %>
+  </div>
+  <div class="field">
+    <%= f.button "Save" %>
+  </div>
+<% end %>

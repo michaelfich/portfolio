@@ -1,13 +1,9 @@
-<article class="project card">
-  <div class="card-image">
-    <%= image_tag("http://robohash.org/#{project.title}") %>
-  </div>
-
-  <header class="title card-header">
+<article class="project">
+  <header class="title">
     <%= link_to project.title, project.url %>
   </header>
 
-  <article class="description card-copy">
+  <article class="description">
     <%= project.description %>
   </article>
 </article>

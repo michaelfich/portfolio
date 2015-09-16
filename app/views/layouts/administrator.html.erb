@@ -1,16 +1,37 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Portfolio</title>
+  <title>Michael Fich | Ruby on Rails Developer</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= stylesheet_link_tag    'administrator', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'administrator', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
   <%= render partial: 'shared/flash' %>
-  <%= render partial: 'shared/user' %>
+
+  <h1>michaelfich.com</h1>
+  <h2>Administrator Control Panel</h2>
+
+  <% if current_user %>
+    <aside>
+      Currently logged in as <%= current_user.name %>.  <%= link_to "Logout", :logout_user  %>
+    </aside>
+  <% else %>
+    <aside>
+      Not currently logged in.
+    </aside>
+  <% end %>
+
+  <nav>
+    <ul>
+      <li><%= link_to "Home", root_url %></li>
+      <li><%= link_to "Blogs", admin_blogs_path %></li>
+      <li><%= link_to "Projects", admin_projects_path %></li>
+    </ul>
+  </nav>
+
   <%= yield %>
+  <%#= render partial: 'shared/footer' %>
 </body>
 </html>
