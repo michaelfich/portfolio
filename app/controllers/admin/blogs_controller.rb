@@ -15,7 +15,7 @@ class Admin::BlogsController < ApplicationController
     @blog = Blog.new(blog_params)
     @blog.published_at = Time.now
     if @blog.save
-      flash[:success] = "Blog #{@blog.title} successfully saved!"
+      flash[:success] = "Saved blog \"#{@blog.title}\""
       redirect_to admin_blogs_path
     else
       flash[:alert] = "There was an error saving the blog post."
@@ -31,7 +31,7 @@ class Admin::BlogsController < ApplicationController
 
   def destroy
     @blog.destroy
-    flash[:success] = "Deleted #{@blog.title}."
+    flash[:success] = "Deleted blog \"#{@blog.title}.\""
     redirect_to admin_blogs_url
   end
 

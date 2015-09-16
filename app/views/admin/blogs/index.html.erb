@@ -18,7 +18,7 @@
         <footer>
           <%= link_to "Show", admin_blog_path(blog) %>
           <%= link_to "Edit", edit_admin_blog_path(blog) %>
-          <%= link_to "Delete", blog, method: :delete %>
+          <%= link_to "Delete", admin_blog_path(blog), method: :delete %>
         </footer>
       </section>
     <% end %>
