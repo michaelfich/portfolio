@@ -1,0 +1,39 @@
+<%= form_for @project, url: url_for(controller: 'admin/projects', action: @action) do |f| %>
+  <div class="field">
+    <%= f.label :title, 'Name' %>
+    <%= f.text_field :title %>
+  </div>
+  <div class="field">
+    <%= f.label :url, 'URL' %>
+    <%= f.text_field :url %>
+  </div>
+  <div class="field">
+    <%= f.label :repo, 'Github Repo' %>
+    <%= f.text_field :repo, value: 'https://github.com/michaelfich/' %>
+  </div>
+  <div class="field">
+    <%= f.label :description %>
+    <%= f.text_area :description %>
+  </div>
+  <div class="field">
+    <%= f.label :featured, 'Featured on the home page' %>
+    <label class="label-switch">
+      <%= f.check_box :featured %>
+      <div class="checkbox"></div>
+    </label>
+  </div>
+  <div class="field">
+    <%= f.label :display, 'Display the project' %>
+    <label class="label-switch">
+      <%= f.check_box :display %>
+      <div class="checkbox"></div>
+    </label>
+  </div>
+  <div class="field">
+    <%= f.label :completed, 'Project has been completed' %>
+    <label class="label-switch">
+      <%= f.check_box :completed %>
+      <div class="checkbox"></div>
+    </label>
+  </div>
+<% end %>

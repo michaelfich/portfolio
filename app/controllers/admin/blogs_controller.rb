@@ -9,6 +9,7 @@ class Admin::BlogsController < ApplicationController
 
   def new
     @blog = Blog.new
+    @action = :create
   end
 
   def create
@@ -24,14 +25,23 @@ class Admin::BlogsController < ApplicationController
   end
 
   def edit
+    @action = :update
   end
 
   def update
+    @blog.update(blog_params)
+    if @blog.save
+      flash[:success] = "Saved blog \"#{@blog.title}\""
+      redirect_to admin_blogs_path
+    else
+      flash[:alert] = "There was an error saving the blog post."
+      render :new
+    end
   end
 
   def destroy
     @blog.destroy
-    flash[:success] = "Deleted blog \"#{@blog.title}.\""
+    flash[:success] = "Deleted blog \"#{@blog.title}\""
     redirect_to admin_blogs_url
   end
 

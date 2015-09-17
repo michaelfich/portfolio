@@ -1,0 +1,15 @@
+<h3>Projects</h3>
+
+<p><%= link_to "New project", new_admin_project_path %></p>
+
+<section class="projects">
+  <% if @projects.any? %>
+    <ul>
+      <% @projects.each do |project| %>
+        <li><%= link_to project.title, edit_admin_project_path(project) %></li>
+      <% end %>
+    </ul>
+  <% else %>
+    <p>There are no projects posted yet</p>
+  <% end %>
+</section>

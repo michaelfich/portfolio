@@ -1,6 +1,9 @@
 a {
   color: #e74c3c;
   text-decoration: none;
+  &:hover {
+    color: #c0392b
+  }
 }
 
 body {
