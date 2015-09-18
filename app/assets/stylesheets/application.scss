@@ -1,9 +1,11 @@
-@import 'normalize';
-
-@import 'bourbon';
-@import 'neat';
+@import 'style';
 
 @import 'font-awesome-sprockets';
 @import 'font-awesome';
 
-@import 'style';
+@import 'application/nav';
+@import 'application/header';
+@import 'application/home/summary';
+@import 'application/home/headings';
+@import 'application/home/projects';
+@import 'application/home/blog';

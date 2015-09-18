@@ -1,0 +1,70 @@
+.hero {
+  @include outer-container;
+
+  .contact {
+    margin-top: 1em;
+    li {
+      display: inline;
+      i {
+        background-color: $action-color;
+        color: white;
+        padding: 5px;
+        border-radius: 2px;
+      }
+      span {
+        display: none;
+      }
+    }
+  }
+
+  h1 {
+    font-size: 2.5rem;
+    letter-spacing: -1px;
+    margin: 0;
+    font-family: $heading-font-family;
+    font-weight: 900;
+  }
+
+  h2 {
+    margin: 0;
+    font-size: 1.1rem;
+    font-family: $heading-font-family;
+    font-weight: 300;
+  }
+
+  @include media($medium-screen-down) {
+    padding: 0.75em 0 2em;
+
+    .avatar {
+      display: block;
+      width: 10em;
+      margin: 0.5em auto 0.5em;
+      border-radius: 100%;
+      padding: 5px;
+      background-color: white;
+      border: 1px solid $medium-gray;
+    }
+
+    h1, h2, .contact {
+      @include span-columns(4 of 4);
+      text-align: center;
+    }
+  }
+
+  @include media($large-screen-up) {
+    padding: 2em 0;
+
+    .avatar {
+      width: 150px;
+      float: left;
+      margin-right: 24px;
+      border-radius: 5px;
+      box-shadow: 0 2px 10px $medium-gray;
+    }
+
+    h1 {
+      margin-top: 5px;
+      font-size: 3.65em;
+    }
+  }
+}

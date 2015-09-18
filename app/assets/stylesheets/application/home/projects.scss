@@ -1,0 +1,14 @@
+section.featured.projects {
+  @include outer-container;
+
+  section.project {
+    @include media($medium-screen-down) {
+      @include span-columns(8);
+    }
+
+    @include media($large-screen-up) {
+      @include span-columns(4);
+      @include omega(3n);
+    }
+  }
+}

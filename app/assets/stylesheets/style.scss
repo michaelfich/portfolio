@@ -1,12 +1,10 @@
-a {
-  color: #e74c3c;
-  text-decoration: none;
-  &:hover {
-    color: #c0392b
-  }
-}
+@import 'normalize';
+
+@import 'bourbon';
+@import 'base/base';
+@import 'neat';
 
 body {
-  padding-left: 2em;
-  padding-right: 2em;
+  border-top: 5px solid $action-color;
+  padding-top: 5px;
 }

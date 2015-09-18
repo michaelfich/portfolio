@@ -1,0 +1,18 @@
+.summary {
+  background-color: $dark-gray;
+  article {
+    @include outer-container;
+    padding-top: 2em;
+    padding-bottom: 2em;
+    color: $light-gray;
+    p {
+      @include span-columns(10);
+      @include shift(1);
+      margin-bottom: 0;
+      // font-style: oblique;
+      text-align: center;
+      font-family: $heading-font-family;
+      font-weight: 300;
+    }
+  }
+}

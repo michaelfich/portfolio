@@ -2,14 +2,16 @@
   <h3>Recent Blogs</h3>
 
   <% @blogs.each do |blog| %>
-    <header>
-      <%= link_to blog.title, blog %>
-    </header>
+    <div class="blog">
+      <header>
+        <%= link_to blog.title, blog %>
+      </header>
 
-    <article>
-      <%= truncate(blog.body, length: 400) do %>
-        <%= link_to "Continue reading", blog  %>
-      <% end %>
-    </article>
+      <article>
+        <%= truncate(blog.body, length: 400) do %>
+          <%= link_to "Continue reading", blog  %>
+        <% end %>
+      </article>
+    </div>
   <% end %>
 </section>
