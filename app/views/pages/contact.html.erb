@@ -1,3 +1,24 @@
 <section class="contact">
   <h3>Let's talk!</h3>
+
+  <%= form_tag do %>
+    <div class="name">
+      <%= label_tag :name, "Name" %>
+      <%= text_field_tag :name %>
+    </div>
+
+    <div class="email">
+      <%= label_tag :email, "Email Address" %>
+      <%= email_field_tag :email %>
+    </div>
+
+    <div class="message">
+      <%= label_tag :message, "Message" %>
+      <%= text_area_tag :message %>
+    </div>
+
+    <div>
+      <%= button_tag "Send Message" %>
+    </div>
+  <% end %>
 </section>

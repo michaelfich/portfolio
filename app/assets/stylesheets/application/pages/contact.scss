@@ -3,4 +3,22 @@ section.contact {
   @include media($medium-screen-down) {
     padding: 0 1rem;
   }
+
+  .name,
+  .email {
+    @include media($large-screen-up) {
+      @include span-columns(6);
+    }
+  }
+
+  .email {
+    @include omega;
+  }
+
+  .message {
+    @include span-columns(12);
+    textarea {
+      height: 15em;
+    }
+  }
 }
