@@ -18,3 +18,7 @@
 @import 'application/pages/contact';
 
 @import 'application/components/ribbon';
+
+body {
+  border-top: 10px solid shade($action-color, 20%);
+}

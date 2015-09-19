@@ -1,6 +1,6 @@
-body {
-  border-top: 10px solid shade($action-color, 20%);
-  padding-top: 10px;
+.header.container {
+  @include outer-container;
+  position: relative;
 }
 
 .hero {
@@ -39,6 +39,7 @@ body {
     margin: 0;
     font-family: $heading-font-family;
     font-weight: 900;
+    color: $dark-gray;
   }
 
   h2 {
@@ -49,7 +50,7 @@ body {
   }
 
   @include media($medium-screen-down) {
-    padding: 0.75em 0 2em;
+    padding: 2em 0 2em;
 
     .avatar {
       display: block;
@@ -68,7 +69,8 @@ body {
   }
 
   @include media($large-screen-up) {
-    padding: 2em 0;
+    margin-top: 2em;
+    padding: 0 0 2em;
 
     .avatar {
       width: 150px;

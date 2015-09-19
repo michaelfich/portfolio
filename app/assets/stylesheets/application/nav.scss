@@ -1,6 +1,4 @@
 .primary {
-  @include outer-container;
-
   @include media($medium-screen-down) {
     .toggle {
       border: 1px solid $action-color;
@@ -52,22 +50,26 @@
   }
 
   @include media($large-screen-up) {
-    margin-top: -11.5em;
-    margin-bottom: 2.5em;
-    position: relative;
+    position: absolute;
+    top: 0;
+    right: 0;
 
     .toggle {
       display: none;
     }
 
     ul {
-      position: absolute;
+      float: right;
       top: 0;
       right: 0;
       line-height: 1em;
       li {
         display: inline-block;
         padding: 0.3em 0.8em;
+        &:last-child {
+          padding-right: 0;
+        }
+
         a {
           span {
             font-size: 0.75em;

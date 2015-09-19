@@ -1,6 +1,13 @@
 <header class="hero">
-  <%= image_tag 'avatar_square.jpg', class: 'avatar' %>
-  <h1>Michael Fich</h1>
+  <%= link_to root_url do %>
+    <%= image_tag 'avatar_square.jpg', class: 'avatar' %>
+  <% end %>
+
+  <%= link_to root_url do %>
+    <h1>Michael Fich</h1>
+  <% end %>
+
   <h2>Full Stack Web Developer</h2>
+
   <%= render partial: 'shared/contact' %>
 </header>

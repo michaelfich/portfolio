@@ -1,42 +1,74 @@
 .all.projects {
   @include outer-container;
+
   @include media($medium-screen-down) {
     padding: 0 1rem;
   }
 
   .project {
-    background-color: lighten($light-gray, 9%);
     border-radius: 2px;
     cursor: pointer;
-    padding: 1em;
-    margin: 1em 0;
+    margin: 2em 0;
 
-    header {
-      font-size: 1.15em;
-      font-weight: bold;
-      margin-bottom: 0.45em;
+    &:first-child {
+      margin-top: 0;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    @include clearfix;
+
+    @include media($large-screen-up) {
+      padding-right: em(25px);
+    }
+
+    aside.thumbnail {
+      @include media($large-screen-up) {
+        @include span-columns(3 of 12);
+      }
+
+      height: 160px;
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    .content {
+      @include media($large-screen-up) {
+        @include span-columns(9 of 12);
+      }
+
+      header {
+        font-size: 1.15em;
+        font-weight: bold;
+        margin-bottom: 0.45em;
+        padding: 0 0 0.5;
+        color: $action-color;
+
+      }
 
       @include media($medium-screen-down) {
-        padding-bottom: 1em;
-        font-size: 1.3em;
-        font-weight: 300;
+        margin: 1em 0;
+
+        &:first-child {
+          margin-top: 0;
+        }
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+
+        aside {
+          color: $dark-gray;
+          img {
+            @include span-columns(3 of 12);
+          }
+        }
       }
     }
 
-    &:hover {
-      background-color: lighten($light-gray, 10%);
-    }
-
-    @include media($medium-screen-down) {
-      margin: 1em 0;
-
-      &:first-child {
-        margin-top: 0;
-      }
-
-      &:last-child {
-        margin-bottom: 0;
-      }
-    }
   }
 }

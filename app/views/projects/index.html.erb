@@ -4,13 +4,8 @@
   <div class="project-list">
     <% @projects.each do |project| %>
       <div class="project">
-        <div class="content">
-          <header class="title">
-            <%= project.title %>
-          </header>
-          <article class="description">
-            <%= project.description %>
-          </article>
+        <aside class="thumbnail">
+          <%= image_tag project.image_preview %>
           <% unless project.completed? %>
             <aside class="in-development">
               <div class="ribbon">
@@ -18,6 +13,17 @@
               </div>
             </aside>
           <% end %>
+        </aside>
+
+        <div class="content">
+          <header class="title">
+            <%= project.title %>
+          </header>
+
+          <article class="description">
+            <%= project.description %>
+          </article>
+
         </div>
       </div>
     <% end %>
