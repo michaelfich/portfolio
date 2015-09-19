@@ -1,17 +1,23 @@
-<section class="blogs">
+<section class="recent blogs">
   <h3>Recent Blogs</h3>
 
-  <% @blogs.each do |blog| %>
-    <div class="blog">
-      <header>
-        <%= link_to blog.title, blog %>
-      </header>
+  <div class="blog-list">
+    <% @blogs.each do |blog| %>
+      <div class="blog">
+        <aside>
+          <%= blog.published_at.strftime("%B %e, %Y") %>
+        </aside>
 
-      <article>
-        <%= truncate(blog.body, length: 400) do %>
-          <%= link_to "Continue reading", blog  %>
-        <% end %>
-      </article>
-    </div>
-  <% end %>
+        <header>
+          <%= link_to blog.title, blog %>
+        </header>
+
+        <article>
+          <%= truncate(blog.body, length: 400) do %>
+            <%= link_to "Continue reading", blog  %>
+          <% end %>
+        </article>
+      </div>
+    <% end %>
+  </div>
 </section>

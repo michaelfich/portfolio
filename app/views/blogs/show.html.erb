@@ -1,6 +1,7 @@
-<section class="blog">
+<article class="blog">
   <h3><%= @blog.title %></h3>
-  <article>
-    <%= simple_format(@blog.body) %>
-  </article>
-</section>
+
+  <p class="date"><%= @blog.published_at.strftime("%B %e, %Y") %></p>
+
+  <%= simple_format(@blog.body) %>
+</article>

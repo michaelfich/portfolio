@@ -1,15 +1,31 @@
+body {
+  border-top: 10px solid shade($action-color, 20%);
+  padding-top: 10px;
+}
+
 .hero {
   @include outer-container;
 
   .contact {
     margin-top: 1em;
     li {
-      display: inline;
-      i {
+      display: inline-block;
+      margin: 1px;
+      @include media($large-screen-up) {
+        &:first-child {
+          margin-left: 0;
+        }
+      }
+
+      a {
+        display: inline-block;
         background-color: $action-color;
         color: white;
-        padding: 5px;
+        width: 2em;
+        height: 2em;
+        line-height: 2em;
         border-radius: 2px;
+        text-align: center;
       }
       span {
         display: none;

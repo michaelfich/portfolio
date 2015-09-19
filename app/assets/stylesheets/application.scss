@@ -5,7 +5,16 @@
 
 @import 'application/nav';
 @import 'application/header';
+@import 'application/footer';
+
 @import 'application/home/summary';
 @import 'application/home/headings';
 @import 'application/home/projects';
 @import 'application/home/blog';
+
+@import 'application/pages/blog';
+@import 'application/pages/article';
+@import 'application/pages/projects';
+@import 'application/pages/contact';
+
+@import 'application/components/ribbon';

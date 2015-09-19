@@ -1,14 +1,50 @@
 section.featured.projects {
   @include outer-container;
 
-  section.project {
+  @include media($medium-screen-down) {
+    padding: 0 1rem;
+  }
+
+  .project {
+    display: block;
+    color: $dark-gray;
+
     @include media($medium-screen-down) {
-      @include span-columns(8);
+      margin: 1.5em 0;
+
+      &:first-child {
+        margin-top: 0;
+      }
+
+      &:last-child {
+        margin-bottom: 0;
+      }
     }
 
     @include media($large-screen-up) {
       @include span-columns(4);
       @include omega(3n);
+    }
+
+    .preview {
+      background: #eee;
+      width: 100%;
+      height: 200px;
+
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    .title {
+      font-size: 1.15em;
+      font-weight: 700;
+      padding-top: 0.3em;
+    }
+
+    .description {
+      font-size: 0.85rem;
     }
   }
 }

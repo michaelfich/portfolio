@@ -30,7 +30,7 @@ Project.create({
 
 Project.create({
   title: 'Rainforest',
-  url: 'https://rainforest.michaelfich.com',
+  url: 'http://rainforest.michaelfich.com',
   repo: 'https://github.com/michaelfich/rainforest',
   featured: true,
   description:

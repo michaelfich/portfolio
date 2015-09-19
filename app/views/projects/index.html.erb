@@ -1,16 +1,25 @@
-<div id="projects">
-  <h1>My Projects</h1>
+<section class="projects all">
+  <h3>Projects</h3>
 
-  <% @projects.each do |project| %>
-    <section class="project ribbon-box">
-      <section class="content">
-        <header class="title">
-          <h3><%= project.title %></h3>
-        </header>
-        <article class="description">
-          <%= project.description %>
-        </article>
-      </section>
-    </section>
-  <% end %>
-</div>
+  <div class="project-list">
+    <% @projects.each do |project| %>
+      <div class="project">
+        <div class="content">
+          <header class="title">
+            <%= project.title %>
+          </header>
+          <article class="description">
+            <%= project.description %>
+          </article>
+          <% unless project.completed? %>
+            <aside class="in-development">
+              <div class="ribbon">
+                In Development
+              </div>
+            </aside>
+          <% end %>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</section>

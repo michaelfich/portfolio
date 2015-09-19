@@ -1,0 +1,6 @@
+section.contact {
+  @include outer-container;
+  @include media($medium-screen-down) {
+    padding: 0 1rem;
+  }
+}

@@ -1,0 +1,42 @@
+.all.projects {
+  @include outer-container;
+  @include media($medium-screen-down) {
+    padding: 0 1rem;
+  }
+
+  .project {
+    background-color: lighten($light-gray, 9%);
+    border-radius: 2px;
+    cursor: pointer;
+    padding: 1em;
+    margin: 1em 0;
+
+    header {
+      font-size: 1.15em;
+      font-weight: bold;
+      margin-bottom: 0.45em;
+
+      @include media($medium-screen-down) {
+        padding-bottom: 1em;
+        font-size: 1.3em;
+        font-weight: 300;
+      }
+    }
+
+    &:hover {
+      background-color: lighten($light-gray, 10%);
+    }
+
+    @include media($medium-screen-down) {
+      margin: 1em 0;
+
+      &:first-child {
+        margin-top: 0;
+      }
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}

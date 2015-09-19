@@ -1,0 +1,13 @@
+footer {
+  margin-top: 3em;
+  padding: 1em 0 5em;
+  background: shade($action-color, 20%);
+
+  div {
+    @include outer-container;
+    color: white;
+    @include media($medium-screen-down) {
+      margin: 0 2rem 3rem;
+    }
+  }
+}

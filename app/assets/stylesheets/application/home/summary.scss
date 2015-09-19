@@ -1,10 +1,13 @@
 .summary {
-  background-color: $dark-gray;
+  background-color: $light-gray;
+  // border-top: 1px solid $medium-gray;
+  // border-bottom: 1px solid $medium-gray;
+
   article {
     @include outer-container;
-    padding-top: 2em;
-    padding-bottom: 2em;
-    color: $light-gray;
+    padding-top: 3em;
+    padding-bottom: 3em;
+    color: $dark-gray;
     p {
       @include span-columns(10);
       @include shift(1);
