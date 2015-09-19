@@ -1,7 +1,9 @@
+$summary-border-color: shade($light-gray, 5%);
+
 .summary {
   background-color: $light-gray;
-  // border-top: 1px solid $medium-gray;
-  // border-bottom: 1px solid $medium-gray;
+  border-top: 1px solid $summary-border-color;
+  border-bottom: 1px solid $summary-border-color;
 
   article {
     @include outer-container;
@@ -12,7 +14,6 @@
       @include span-columns(10);
       @include shift(1);
       margin-bottom: 0;
-      // font-style: oblique;
       text-align: center;
       font-family: $heading-font-family;
       font-weight: 300;
