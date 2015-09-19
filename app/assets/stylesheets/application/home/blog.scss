@@ -19,7 +19,14 @@
     }
 
     aside {
+      padding-top: 0.3em;
       font-size: 0.8rem;
+    }
+
+    header {
+      font-family: $heading-font-family;
+      font-size: 1.15em;
+      font-weight: 900;
     }
 
     article {
