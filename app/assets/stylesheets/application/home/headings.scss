@@ -7,6 +7,7 @@
     text-transform: uppercase;
     font-family: $heading-font-family;
     border-bottom: 1px solid $dark-gray;
+    margin: 0 0 1rem;
 
     @include media($medium-screen-down) {
       margin: 0 0 0.65rem;

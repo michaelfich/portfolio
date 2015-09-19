@@ -50,7 +50,7 @@
   }
 
   @include media($medium-screen-down) {
-    padding: 2em 0 2em;
+    margin: 3em 0;
 
     .avatar {
       display: block;
@@ -69,8 +69,7 @@
   }
 
   @include media($large-screen-up) {
-    margin-top: 2em;
-    padding: 0 0 2em;
+    margin: 3em 0;
 
     .avatar {
       width: 150px;
