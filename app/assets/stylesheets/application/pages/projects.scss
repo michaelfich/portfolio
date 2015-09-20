@@ -20,12 +20,9 @@
 
     @include clearfix;
 
-    @include media($large-screen-up) {
-      padding-right: em(25px);
-    }
-
     aside.thumbnail {
       height: 12em;
+      background: yellow;
 
       @include media($large-screen-up) {
         @include span-columns(4 of 12);
