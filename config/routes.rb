@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   resources :projects, only: [:index, :show]
   resources :blogs, only: [:index, :show]
 
-  get 'about' => 'pages#about', as: :about_me
+  get 'about' => 'pages#about', as: :about
   get 'portfolio' => 'pages#portfolio', as: :portfolio
   get 'contact' => 'pages#contact', as: :contact
 

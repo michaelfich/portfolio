@@ -5,6 +5,7 @@
 
 .hero {
   @include outer-container;
+  // background: white;
 
   .contact {
     margin-top: 1em;
