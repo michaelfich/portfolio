@@ -29,7 +29,7 @@ class Admin::ProjectsController < ApplicationController
   end
 
   def update
-    @project.update(project_params)
+    @project.update_attributes(project_params)
     if @project.save
       flash[:success] = "Saved project \"#{@project.title}\""
       redirect_to admin_projects_path
@@ -51,6 +51,6 @@ class Admin::ProjectsController < ApplicationController
     end
 
     def project_params
-      params[:project]
+      params.require(:project).permit(:title, :description, :url, :repo, :image_preview, :image_large, :featured, :display, :permitted)
     end
 end
