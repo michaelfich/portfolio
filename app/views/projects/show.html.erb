@@ -1,5 +1,24 @@
 <div class="project">
   <h3><%= @project.title %></h3>
 
-  <%= image_tag(@project.image_large) %>
+  <%= image_tag @project.image_large %>
+
+  <article>
+    <%= simple_format(@project.description) %>
+  </article>
+
+  <ul>
+    <li>
+      <%= link_to @project.repo do %>
+        <i class="fa fa-github"></i>
+        <span><%= @project.repo %></span>
+      <% end %>
+    </li>
+    <li>
+      <%= link_to @project.url do %>
+        <i class="fa fa-link"></i>
+        <span><%= @project.url %></span>
+      <% end %>
+    </li>
+  </ul>
 </div>
