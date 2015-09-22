@@ -10,6 +10,12 @@ section.all.blogs {
         margin: em(12px) 0 0;
         font-size: 1.35rem;
       }
+
+      article {
+        font-family: $base-font-family;
+        font-size: 1.05em;
+        line-height: 1.5;
+      }
     }
   }
 }
