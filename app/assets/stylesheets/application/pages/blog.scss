@@ -1,6 +1,15 @@
-section.blogs {
+section.all.blogs {
   @include outer-container;
   @include media($medium-screen-down) {
     padding: 0 1rem;
+  }
+
+  .blog-list {
+    .blog {
+      h4 {
+        margin: em(12px) 0 0;
+        font-size: 1.35rem;
+      }
+    }
   }
 }

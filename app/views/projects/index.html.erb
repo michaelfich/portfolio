@@ -3,7 +3,7 @@
 
   <div class="project-list">
     <% @projects.each do |project| %>
-      <div class="project">
+      <%= link_to project, class: 'project' do %>
         <aside class="thumbnail">
           <%= image_tag project.image_preview %>
           <% unless project.completed? %>
@@ -16,15 +16,15 @@
         </aside>
 
         <div class="content">
-          <header class="title">
+          <header>
             <%= project.title %>
           </header>
 
-          <article class="description">
+          <article>
             <%= project.description %>
           </article>
         </div>
-      </div>
+      <% end %>
     <% end %>
   </div>
 </section>

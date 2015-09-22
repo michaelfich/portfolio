@@ -1,4 +1,4 @@
-$summary-border-color: shade($light-gray, 5%);
+$summary-border-color: $medium-gray;
 
 .summary {
   background-color: $light-gray;
@@ -15,9 +15,10 @@ $summary-border-color: shade($light-gray, 5%);
       @include shift(1);
       margin-bottom: 0;
       text-align: center;
-      font-family: $base-font-family;
-      font-weight: 300;
+      font-family: $heading-font-family;
+      font-size: 1.05em;
       color: $dark-gray;
+      line-height: 1.5
       // font-style: oblique;
     }
   }

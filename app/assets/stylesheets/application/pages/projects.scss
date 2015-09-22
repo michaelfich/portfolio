@@ -6,6 +6,7 @@
   }
 
   & > .project-list > .project {
+    display: block;
     border-radius: 2px;
     cursor: pointer;
     margin: 2em 0;
@@ -41,34 +42,22 @@
       }
 
       header {
-        font-size: 1.15em;
-        font-weight: bold;
-        margin-bottom: 0.45em;
+        font-size: 1.75em;
+        font-weight: 500;
+        margin-bottom: 0.1em;
         padding: 0 0 0.5;
         color: $action-color;
+        font-family: $heading-font-family;
 
+        @include media($medium-screen-down) {
+          font-size: 1.4rem;
+        }
       }
 
-      @include media($medium-screen-down) {
-        margin: 1em 0;
-
-        &:first-child {
-          margin-top: 0;
-        }
-
-        &:last-child {
-          margin-bottom: 0;
-        }
-
-        aside {
-          color: $dark-gray;
-          img {
-            @include span-columns(3 of 12);
-          }
-        }
+      article {
+        color: $dark-gray;
       }
     }
-
   }
 }
 
