@@ -9,7 +9,6 @@ class Admin::BlogsController < ApplicationController
 
   def new
     @blog = Blog.new
-    @action = :create
   end
 
   def create
@@ -25,7 +24,6 @@ class Admin::BlogsController < ApplicationController
   end
 
   def edit
-    @action = :update
   end
 
   def update

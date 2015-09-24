@@ -9,7 +9,6 @@ class Admin::ProjectsController < ApplicationController
 
   def new
     @project = Project.new
-    @action = :create
   end
 
   def create
@@ -25,7 +24,6 @@ class Admin::ProjectsController < ApplicationController
   end
 
   def edit
-    @action = :update
   end
 
   def update
