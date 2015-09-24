@@ -1,7 +1,46 @@
 <article class="blog">
   <h3><%= @blog.title %></h3>
-
   <p class="date"><%= @blog.published_at.strftime("%B %e, %Y") %></p>
 
   <%= simple_format(@blog.body) %>
+
+  <hr>
+
+  <div class="comments">
+    <h4>Comments</h4>
+
+    <div class="comment-list">
+      <% if @comments.any? %>
+        <div class="comment">
+          <% @comments.each do |post| %>
+            <%= post.comment %><br>
+            Posted by: <%= post.user.name %>
+          <% end %>
+        </div>
+      <% else %>
+        <p>Be the first to comment on this blog!</p>
+      <% end %>
+    </div>
+
+    <div class="user">
+      <% if current_user %>
+        <%= form_for [@blog, @comment] do |f| %>
+          <div class="avatar">
+            <%= image_tag current_user.avatar %>
+          </div>
+          <div class="comment">
+            <%= f.text_area :comment %>
+            <%= f.button 'Post comment' %>
+          </div>
+        <% end %>
+      <% else %>
+        <%= button_to auth_at_provider_path('github'), method: :get do %>
+          <i class="fa fa-github"></i>
+          Sign in with GitHub
+        <% end %>
+      <% end %>
+    </div>
+
+  </div>
+
 </article>

@@ -1,0 +1,22 @@
+.blog {
+  .comments {
+    .user {
+      @include outer-container;
+
+      .avatar {
+        @include span-columns(1);
+        @include shift(1);
+
+        img {
+          border-radius: 5px;
+        }
+      }
+      .comment {
+        @include span-columns(9);
+        textarea {
+          height: 10em;
+        }
+      }
+    }
+  }
+}

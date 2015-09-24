@@ -1,8 +1,12 @@
 Rails.application.routes.draw do
+  get 'comments/create'
+
   root to: 'pages#home'
 
   resources :projects, only: [:index, :show]
-  resources :blogs, only: [:index, :show]
+  resources :blogs, only: [:index, :show] do
+    resources :comments, only: [:create]
+  end
 
   get 'about' => 'pages#about', as: :about
   get 'portfolio' => 'pages#portfolio', as: :portfolio
