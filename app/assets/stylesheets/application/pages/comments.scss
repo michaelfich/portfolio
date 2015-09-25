@@ -1,20 +1,39 @@
 .blog {
-  .comments {
-    .user {
-      @include outer-container;
+  h4 {
+    font-size: 1.4em;
+  }
+
+  #comments {
+    @include span-columns(12);
+
+    .comment {
+      @include span-columns(10);
+      margin-top: 0.25em;
+      margin-bottom: 0.25em;
 
       .avatar {
-        @include span-columns(1);
-        @include shift(1);
-
+        @include span-columns(1 of 10);
+        text-align: right;
         img {
           border-radius: 5px;
+          display: inline;
         }
       }
-      .comment {
-        @include span-columns(9);
+
+      .content {
+        @include span-columns(9 of 10);
+        @include omega;
+
+        font-family: $base-font-family;
+
         textarea {
           height: 10em;
+        }
+
+        footer {
+          color: $medium-gray;
+          font-style: oblique;
+          font-size: 0.85rem;
         }
       }
     }

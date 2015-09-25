@@ -6,29 +6,36 @@
 
   <hr>
 
-  <div class="comments">
+  <div id="comments">
     <h4>Comments</h4>
 
     <div class="comment-list">
       <% if @comments.any? %>
-        <div class="comment">
-          <% @comments.each do |post| %>
-            <%= post.comment %><br>
-            Posted by: <%= post.user.name %>
-          <% end %>
-        </div>
+        <% @comments.each do |post| %>
+          <div class="comment">
+            <div class="avatar">
+              <%= image_tag post.user.avatar %>
+            </div>
+            <div class="content">
+              <%= post.comment %>
+              <footer>
+                Posted by <%= post.user.name %> on <%= post.created_at.strftime("%B %e, %Y") %>
+              </footer>
+            </div>
+          </div>
+        <% end %>
       <% else %>
         <p>Be the first to comment on this blog!</p>
       <% end %>
     </div>
 
-    <div class="user">
+    <div class="comment">
       <% if current_user %>
         <%= form_for [@blog, @comment] do |f| %>
           <div class="avatar">
             <%= image_tag current_user.avatar %>
           </div>
-          <div class="comment">
+          <div class="content">
             <%= f.text_area :comment %>
             <%= f.button 'Post comment' %>
           </div>
@@ -40,7 +47,5 @@
         <% end %>
       <% end %>
     </div>
-
   </div>
-
 </article>
