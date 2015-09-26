@@ -1,40 +1,45 @@
-.blog {
+#comments {
   h4 {
     font-size: 1.4em;
   }
 
-  #comments {
-    @include span-columns(12);
+  hr {
+    margin-bottom: 0.5em;
+  }
 
-    .comment {
-      @include span-columns(10);
-      margin-top: 0.25em;
-      margin-bottom: 0.25em;
+  @include span-columns(8);
 
-      .avatar {
-        @include span-columns(1 of 10);
-        text-align: right;
-        img {
-          border-radius: 5px;
-          display: inline;
-        }
+  .comment {
+    @include span-columns(8 of 8);
+
+    margin-top: 0.25em;
+    margin-bottom: 0.25em;
+
+    .avatar {
+      @include span-columns(1 of 8);
+      // text-align: center;
+      // background: tint($light-gray, 25%);
+      // box-shadow: 0 1 10px $light-gray;
+
+      img {
+        border-radius: 5px;
+      }
+    }
+
+    .content {
+      @include span-columns(7 of 8);
+      @include omega;
+
+      font-family: $base-font-family;
+
+      textarea {
+        height: 10em;
       }
 
-      .content {
-        @include span-columns(9 of 10);
-        @include omega;
-
-        font-family: $base-font-family;
-
-        textarea {
-          height: 10em;
-        }
-
-        footer {
-          color: $medium-gray;
-          font-style: oblique;
-          font-size: 0.85rem;
-        }
+      footer {
+        color: $medium-gray;
+        font-style: oblique;
+        font-size: 0.85rem;
       }
     }
   }
