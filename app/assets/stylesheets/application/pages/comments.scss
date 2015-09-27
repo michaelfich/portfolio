@@ -7,19 +7,21 @@
     margin-bottom: 0.5em;
   }
 
-  @include span-columns(8);
+  @include media($large-screen-up) {
+    @include span-columns(8);
+  }
+
 
   .comment {
-    @include span-columns(8 of 8);
+    @include media($large-screen-up) {
+      @include span-columns(8 of 8);
+    }
 
-    margin-top: 0.25em;
-    margin-bottom: 0.25em;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
 
     .avatar {
-      @include span-columns(1 of 8);
-      // text-align: center;
-      // background: tint($light-gray, 25%);
-      // box-shadow: 0 1 10px $light-gray;
+      @include span-columns(1);
 
       img {
         border-radius: 5px;
