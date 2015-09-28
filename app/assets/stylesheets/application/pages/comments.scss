@@ -11,14 +11,15 @@
     @include span-columns(8);
   }
 
-
   .comment {
+    @include clearfix;
+
     @include media($large-screen-up) {
       @include span-columns(8 of 8);
     }
 
-    margin-top: 0.5em;
-    margin-bottom: 0.5em;
+    margin-top: 1em;
+    margin-bottom: 1em;
 
     .avatar {
       @include span-columns(1);
