@@ -1,0 +1,9 @@
+<h3>Messages</h3>
+
+<ul class="messages">
+  <% @messages.each do |message| %>
+    <li class="message">
+      <%= link_to "Read message", [:admin, message] %> from <%= message.email %>
+    </li>
+  <% end %>
+</ul>

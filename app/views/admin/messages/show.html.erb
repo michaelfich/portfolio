@@ -1,0 +1,14 @@
+<h3>Message</h3>
+
+<ul class="details">
+  <li><strong>Name:</strong> <%= @message.name %></li>
+  <li><strong>Email:</strong> <%= @message.email %></li>
+
+  <% if @message.ip_address %>
+    <li><strong>IP Address:</strong> <%= @message.ip_address %></li>
+  <% end %>
+
+  <li>Date: <%= @message.created_at.strftime("%B %d, %Y") %></li>
+</ul>
+
+<%= simple_format(@message.body) %>
