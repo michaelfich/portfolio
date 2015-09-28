@@ -5,6 +5,7 @@ class MessagesController < ApplicationController
 
   def create
     @message = Message.new(message_params)
+    @message.ip_address = request.remote_ip
     if @message.save
       redirect_to :root, notice: 'Your message has been sent.'
     else
