@@ -1,4 +1,4 @@
-class Admin::BlogsController < ApplicationController
+class Admin::BlogsController < AdminController
   layout "administrator"
   before_filter :is_admin?
   before_action :set_blog, only: [:show, :edit, :update, :destroy]

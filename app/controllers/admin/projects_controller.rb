@@ -1,4 +1,4 @@
-class Admin::ProjectsController < ApplicationController
+class Admin::ProjectsController < AdminController
   layout "administrator"
   before_filter :is_admin?
   before_action :set_project, only: [:show, :edit, :update, :destroy]
