@@ -1,6 +1,10 @@
 li.message {
-  margin-bottom: 1px;
   background: lighten($light-gray, 8%);
+  margin-bottom: 2px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
 
   &:hover {
     background: lighten($light-gray, 9%);
