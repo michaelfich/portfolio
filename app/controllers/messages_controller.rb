@@ -11,6 +11,7 @@ class MessagesController < ApplicationController
     else
       render :index, alert: 'Unable to send your message.'
     end
+    @unread = Message.where(read: false).count
   end
 
   private
