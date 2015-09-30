@@ -6,7 +6,7 @@
 # server 'example.com', user: 'deploy', roles: %w{app db web}, my_property: :my_value
 # server 'example.com', user: 'deploy', roles: %w{app web}, other_property: :other_value
 # server 'db.example.com', user: 'deploy', roles: %w{db}
-server '159.203.5.115', user: 'rails', roles: %w{app db web}
+server '159.203.5.95', user: 'rails', roles: %w{app db web}
 
 
 # role-based syntax
@@ -17,9 +17,9 @@ server '159.203.5.115', user: 'rails', roles: %w{app db web}
 # property set. Specify the username and a domain or IP for the server.
 # Don't use `:all`, it's a meta role.
 
-role :app, %w{rails@michaelfich.com}, my_property: :my_value
-role :web, %w{rails@michaelfich.com}, other_property: :other_value
-role :db,  %w{rails@michaelfich.com}
+role :app, %w{rails@159.203.5.95}, my_property: :my_value
+role :web, %w{rails@159.203.5.95}, other_property: :other_value
+role :db,  %w{rails@159.203.5.95}
 
 
 
@@ -45,7 +45,7 @@ role :db,  %w{rails@michaelfich.com}
    # keys: %w(/home/rails/.ssh/id_rsa),
    forward_agent: false,
    auth_methods: %w(password),
-   password: 'S5IkadFU8v',
+   password: '6vjtmou4nx',
    user: 'rails'
  }
 #
