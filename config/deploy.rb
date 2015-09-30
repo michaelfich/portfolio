@@ -2,25 +2,29 @@
 lock '3.4.0'
 
 set :application, 'portfolio'
-set :repo_url, 'git@github.com:michaelfich/portfolio.git'
+set :repo_url, 'https://github.com/michaelfich/portfolio'
 
 # Default branch is :master
 # ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
 
 # Default deploy_to directory is /var/www/my_app_name
-set :deploy_to, '/home/deploy/portfolio'
+set :deploy_to, '/home/rails/portfolio'
 
 # Default value for :scm is :git
 # set :scm, :git
 
+# set :rvm_type, :user                     # Defaults to: :auto
+# set :rvm_ruby_version, '2.2.1'           # Defaults to: 'default'
+# set :rvm_custom_path, '~/.myveryownrvm'  # only needed if not detected
+
 # Default value for :format is :pretty
-# set :format, :pretty
+set :format, :pretty
 
 # Default value for :log_level is :debug
 # set :log_level, :debug
 
 # Default value for :pty is false
-# set :pty, true
+set :pty, true
 
 # Default value for :linked_files is []
 # set :linked_files, fetch(:linked_files, []).push('config/database.yml', 'config/secrets.yml')
