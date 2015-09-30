@@ -1,11 +1,13 @@
-# add your own configuration variables for oauth with github
+# Add configuration values here, as shown below.
 
-# development:
-#  github_client_id:
-#  github_client_secret:
-#  github_callback_url: "http://localhost:3000/oauth/callback?provider=github"
+development:
+ github_client_id: ''
+ github_client_secret: ''
+ github_callback_url: 'http://localhost:3000/oauth/callback?provider=github'
 
-# production:
-  # github_client_id:
-  # github_client_secret:
-  # github_callback_url:
+production:
+  github_client_id: ''
+  github_client_secret: ''
+  github_callback_url: 'http://michaelfich.com/oauth/callback?provider=github'
+  APP_DATABASE_USERNAME: ''
+  APP_DATABASE_PASSWORD: ''
