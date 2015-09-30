@@ -13,7 +13,6 @@ class Admin::ProjectsController < AdminController
 
   def create
     @project = Project.new(project_params)
-    @project.published_at = Time.now
     if @project.save
       flash[:success] = "Saved project \"#{@project.title}\""
       redirect_to admin_projects_path
@@ -49,6 +48,6 @@ class Admin::ProjectsController < AdminController
     end
 
     def project_params
-      params.require(:project).permit(:title, :description, :url, :repo, :image_preview, :image_large, :featured, :display, :permitted)
+      params.require(:project).permit(:title, :description, :url, :repo, :image_preview, :image_large, :featured, :display, :permitted, :completed)
     end
 end
