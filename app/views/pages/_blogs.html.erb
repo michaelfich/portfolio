@@ -5,7 +5,7 @@
     <% @blogs.each do |blog| %>
       <div class="blog">
         <aside>
-          <%= blog.published_at.strftime("%B %e, %Y") %>
+          <%= blog.published_at.in_time_zone("Eastern Time (US & Canada)").strftime("%B %e, %Y") %>
         </aside>
 
         <header>

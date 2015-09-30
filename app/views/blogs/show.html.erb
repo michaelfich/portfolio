@@ -1,6 +1,6 @@
 <article class="blog">
   <h3><%= @blog.title %></h3>
-  <p class="date"><%= @blog.published_at.strftime("%B %e, %Y") %></p>
+  <p class="date"><%= @blog.published_at.in_time_zone("Eastern Time (US & Canada)").strftime("%B %e, %Y") %></p>
 
   <%= simple_format(@blog.body) %>
 
@@ -19,7 +19,7 @@
             <div class="content">
               <%= post.comment %>
               <footer>
-                Posted by <%= post.user.name %> on <%= post.created_at.strftime("%B %e, %Y") %>
+                Posted by <%= post.user.name %> on <%= post.created_at.in_time_zone("Eastern Time (US & Canada)").strftime("%B %e, %Y") %>
               </footer>
             </div>
           </div>

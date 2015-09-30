@@ -7,7 +7,7 @@
         <h4><%= link_to blog.title, blog %></h4>
 
         <aside class="date">
-          <%= blog.published_at.strftime("%B %e, %Y") %>
+          <%= blog.published_at.in_time_zone("Eastern Time (US & Canada)").strftime("%B %e, %Y") %>
         </aside>
 
         <article>

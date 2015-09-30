@@ -14,7 +14,7 @@
 
     <li>
       <strong>Date:</strong>
-      <%= @message.created_at.strftime("%B %d, %Y") %>
+      <%= @message.created_at.in_time_zone("Eastern Time (US & Canada)").strftime("%B %d, %Y") %>
     </li>
 
     <% if @message.ip_address %>
