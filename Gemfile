@@ -19,6 +19,7 @@ gem 'bourbon'
 gem 'neat'
 gem 'font-awesome-sass'
 gem 'kaminari', '~> 0.16.3'
+gem 'puma'
 
 group :development, :test do
   gem 'byebug'
@@ -30,13 +31,12 @@ group :development, :test do
 end
 
 group :development do
-  gem 'capistrano', '~> 3.4.0'
-  gem 'capistrano-rails', '~> 1.1.3'
-  gem 'capistrano-rvm'
-  gem 'capistrano-bundler'
-  gem 'capistrano3-puma'
+  gem 'capistrano', '~> 3.4.0', require: false
+  gem 'capistrano-rails', '~> 1.1.3', require: false
+  gem 'capistrano-bundler', '~> 1.1', require: false
+  gem 'capistrano-rbenv', "~> 2.0", require: false
+  gem 'capistrano3-puma', '~> 1.2', require: false
 end
 
-group :production do
-  gem 'puma'
-end
+# group :production do
+# end

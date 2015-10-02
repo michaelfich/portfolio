@@ -6,7 +6,7 @@
 # server 'example.com', user: 'deploy', roles: %w{app db web}, my_property: :my_value
 # server 'example.com', user: 'deploy', roles: %w{app web}, other_property: :other_value
 # server 'db.example.com', user: 'deploy', roles: %w{db}
-server '159.203.5.95', user: 'rails', roles: %w{app db web}
+server '159.203.12.100', user: 'deploy', roles: %w{app db web}
 
 
 # role-based syntax
@@ -17,11 +17,20 @@ server '159.203.5.95', user: 'rails', roles: %w{app db web}
 # property set. Specify the username and a domain or IP for the server.
 # Don't use `:all`, it's a meta role.
 
-role :app, %w{rails@159.203.5.95}, my_property: :my_value
-role :web, %w{rails@159.203.5.95}, other_property: :other_value
-role :db,  %w{rails@159.203.5.95}
+# role :app, %w{deploy@159.203.12.100}, my_property: :my_value
+# role :web, %w{deploy@159.203.12.100}, other_property: :other_value
+# role :db,  %w{deploy@159.203.12.100}
 
 
+
+set :default_env, {
+  'MAX_THREADS': 1
+}
+
+# set :nginx_server_name
+set :puma_threads, [1, 1]
+set :puma_workers, 5
+set :puma_init_active_record, true
 
 # Configuration
 # =============
@@ -43,10 +52,8 @@ role :db,  %w{rails@159.203.5.95}
 # --------------
  set :ssh_options, {
    # keys: %w(/home/rails/.ssh/id_rsa),
-   forward_agent: false,
-   auth_methods: %w(password),
-   password: '6vjtmou4nx',
-   user: 'rails'
+   forward_agent: true,
+   auth_methods: %w(publickey),
  }
 #
 # The server-based syntax can be used to override options:
