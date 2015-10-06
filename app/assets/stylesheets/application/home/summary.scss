@@ -1,23 +1,21 @@
 $summary-border-color: $medium-gray;
 
 .summary {
+  // background-color: lighten($action-color, 20%);
   background-color: $light-gray;
-
   article {
     @include outer-container;
     padding-top: 2.5em;
     padding-bottom: 2.5em;
-    color: $dark-gray;
     p {
       @include span-columns(10);
       @include shift(1);
       margin-bottom: 0;
       text-align: center;
-      font-family: $heading-font-family;
-      font-size: 0.85em;
+      font-family: $base-font-family;
+      font-size: 0.9em;
       color: $dark-gray;
       line-height: 1.75;
-      // font-style: oblique;
     }
   }
 }

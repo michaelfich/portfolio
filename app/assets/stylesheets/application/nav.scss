@@ -77,7 +77,19 @@
             font-weight: bold;
             text-transform: uppercase;
           }
+
+          @include media($large-screen-up) {
+            &.contact {
+              background: rgba(139, 195, 74, 1);
+              color: white;
+              display: block;
+              margin-top: -0.65em;
+              padding: 0.65em 1.3em;
+              border-radius: 2px;
+            }
+          }
         }
+
       }
     }
   }
