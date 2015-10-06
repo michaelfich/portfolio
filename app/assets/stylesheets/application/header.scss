@@ -28,25 +28,11 @@
         border-radius: 2px;
         text-align: center;
 
-        &.twitter {
-          background-color: #00aced;
-        }
-
-        &.linkedin {
-          background-color: #007bb5;
-        }
-
-        &.google {
-          background-color: #dd4b39;
-        }
-
-        &.github {
-          background-color: #333333;
-        }
-
-        &.email {
-          background-color: #45668e;
-        }
+        &.twitter   { background-color: #00aced; }
+        &.linkedin  { background-color: #007bb5; }
+        &.google    { background-color: #dd4b39; }
+        &.github    { background-color: #333333; }
+        &.youtube   { background-color: #bb0000; }
       }
       span {
         display: none;

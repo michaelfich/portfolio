@@ -1,5 +1,11 @@
   <ul class="contact">
     <li>
+      <%= link_to "https://github.com/michaelfich", class: "github" do %>
+        <i class="fa fa-github"></i>
+        <span>Github</span>
+      <% end %>
+    </li>
+    <li>
       <%= link_to "https://twitter.com/michael_fich", class: 'twitter' do %>
         <i class="fa fa-twitter"></i>
         <span>Twitter</span>
@@ -18,15 +24,9 @@
       <% end %>
     </li>
     <li>
-      <%= link_to "https://github.com/michaelfich", class: "github" do %>
-        <i class="fa fa-github"></i>
-        <span>Github</span>
-      <% end %>
-    </li>
-    <li>
-      <%= mail_to "michael@michaelfich.com", class: "email" do %>
-        <i class="fa fa-envelope"></i>
-        <span>Email</span>
+      <%= mail_to "https://www.youtube.com/channel/UCKjONQ6tmzX9CBMRl2PW0mQ", class: "youtube" do %>
+        <i class="fa fa-youtube-play"></i>
+        <span>YouTube</span>
       <% end %>
     </li>
   </ul>
