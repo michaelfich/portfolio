@@ -89,6 +89,7 @@ $contact-color: #4CAF50;
               margin-top: -0.65em;
               padding: 0.65em 1.3em;
               border-radius: 2px;
+              outline: none;
               &:hover {
                 background-color: shade($contact-color, 20%);
               }
