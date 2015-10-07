@@ -46,7 +46,9 @@
     margin: 0;
     font-family: $heading-font-family;
     font-weight: 900;
-    color: $dark-gray;
+    a {
+      color: $dark-gray;
+    }
   }
 
   h2 {

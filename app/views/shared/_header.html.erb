@@ -3,10 +3,7 @@
     <%= image_tag 'avatar_square.jpg', class: 'avatar' %>
   <% end %>
 
-  <%= link_to root_url do %>
-    <h1>Michael Fich</h1>
-  <% end %>
-
+  <h1><%= link_to 'Michael Fich', root_url %></h1>
   <h2>Full Stack Web Developer</h2>
 
   <%= render partial: 'shared/contact' %>

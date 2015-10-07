@@ -68,25 +68,23 @@ $contact-color: #4CAF50;
       line-height: 1em;
       li {
         display: inline-block;
-        padding: 0.3em 0.8em;
-        &:last-child {
-          padding-right: 0;
-        }
-
         a {
+          display: block;
+          padding: 0.65em;
+          margin-left: 2px;
           span {
             font-size: 0.75em;
             font-weight: bold;
             text-transform: uppercase;
           }
+        }
 
-
-          @include media($large-screen-up) {
-            &.contact {
+        @include media($large-screen-up) {
+          &.contact {
+            a {
               background: $contact-color;
               color: white;
               display: block;
-              margin-top: -0.65em;
               padding: 0.65em 1.3em;
               border-radius: 2px;
               outline: none;
@@ -96,7 +94,6 @@ $contact-color: #4CAF50;
             }
           }
         }
-
       }
     }
   }
