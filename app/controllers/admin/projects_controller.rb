@@ -4,7 +4,7 @@ class Admin::ProjectsController < AdminController
   before_action :set_project, only: [:show, :edit, :update, :destroy]
 
   def index
-    @projects = Project.all.order(id: :desc)
+    @projects = Project.all.order(order: :desc)
   end
 
   def new
@@ -48,6 +48,6 @@ class Admin::ProjectsController < AdminController
     end
 
     def project_params
-      params.require(:project).permit(:title, :slug, :description, :url, :repo, :image_preview, :image_large, :featured, :display, :permitted, :completed)
+      params.require(:project).permit(:title, :slug, :order, :description, :url, :repo, :image_preview, :image_large, :featured, :display, :permitted, :completed)
     end
 end

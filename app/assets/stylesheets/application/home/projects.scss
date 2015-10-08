@@ -1,40 +1,29 @@
 section.featured.projects {
   @include outer-container;
-
   @include media($medium-screen-down) {
     padding: 0 1rem;
   }
-
   .project {
     display: block;
     color: $dark-gray;
-
     @include media($medium-screen-down) {
       margin: 1.5em 0;
-
-      &:first-child {
-        margin-top: 0;
-      }
-
-      &:last-child {
-        margin-bottom: 0;
-      }
+      &:first-child   { margin-top: 0; }
+      &:last-child    { margin-bottom: 0; }
     }
-
     @include media($large-screen-up) {
       @include span-columns(4);
       @include omega(3n);
     }
-
     .thumbnail {
       width: 100%;
       min-height: 200px;
       img {
         width: 100%;
         display: block;
+        min-height: 256px;
       }
     }
-
     .title {
       font-family: $heading-font-family;
       font-size: 1.15em;
@@ -42,7 +31,6 @@ section.featured.projects {
       padding-top: 0.3em;
       color: $action-color;
     }
-
     .description {
       font-size: 0.85rem;
       margin: 0;

@@ -9,6 +9,7 @@
 Project.create({
   title: 'Bitvestr',
   slug: 'bitvestr',
+  order: 3,
   url: 'http://www.bitvestr.com',
   repo: 'https://github.com/michaelfich/bitvestr',
   featured: true,
@@ -18,6 +19,7 @@ Project.create({
 Project.create({
   title: 'Tic Tac Toe',
   slug: 'tic-tac-toe',
+  order: 1,
   url: 'http://tictactoe.michaelfich.com',
   repo: 'https://github.com/michaelfich/tictactoe',
   featured: true,
@@ -27,6 +29,7 @@ Project.create({
 Project.create({
   title: 'Rainforest',
   slug: 'rainforest',
+  order: 2,
   url: 'http://rainforest.michaelfich.com',
   repo: 'https://github.com/michaelfich/rainforest',
   featured: true,

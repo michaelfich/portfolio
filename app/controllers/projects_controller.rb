@@ -1,6 +1,6 @@
 class ProjectsController < ApplicationController
   def index
-    @projects = Project.where(display: true).order(id: :desc)
+    @projects = Project.where(display: true).order(order: :desc)
   end
 
   def show
