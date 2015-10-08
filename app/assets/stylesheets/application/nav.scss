@@ -83,12 +83,11 @@ $contact-color: #4CAF50;
           &.contact {
             a {
               background: $contact-color;
-              color: white;
+              color: #000000;
               display: block;
               padding: 0.65em 1.3em;
               border-radius: 2px;
               outline: none;
-              border: 2px solid lighten($contact-color, 15%);
               &:hover {
                 background-color: shade($contact-color, 20%);
                 border-color: shade($contact-color, 20%);
