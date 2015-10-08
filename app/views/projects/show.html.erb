@@ -1,7 +1,16 @@
 <div class="project">
   <h3><%= @project.title %></h3>
 
-  <%= image_tag @project.image_large %>
+  <div class="image">
+    <%= image_tag @project.image_large %>
+    <% unless @project.completed? %>
+      <aside class="in-development">
+        <div class="ribbon">
+          In Development
+        </div>
+      </aside>
+    <% end %>
+  </div>
 
   <article>
     <%= simple_format(@project.description) %>

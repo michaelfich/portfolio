@@ -64,8 +64,17 @@
 .project {
   @include outer-container;
 
-  img {
-    @include span-columns(12 of 12);
-    height: 200px;
+  .image {
+    @include clearfix;
+    img {
+      @include span-columns(12 of 12);
+      @include omega;
+      height: 420px;
+      background-color: $light-gray;
+    }
+  }
+
+  article {
+    margin: 1em 0;
   }
 }
