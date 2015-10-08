@@ -92,6 +92,9 @@ $contact-color: #4CAF50;
                 background-color: shade($contact-color, 20%);
                 border-color: shade($contact-color, 20%);
               }
+              i {
+                display: none;
+              }
             }
           }
         }
