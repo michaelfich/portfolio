@@ -5,6 +5,7 @@
 @import 'admin/form';
 @import 'admin/flash';
 @import 'admin/about';
+@import 'admin/blog';
 
 .container {
   @include outer-container;
@@ -20,4 +21,8 @@ h1 {
 h2 {
   font-size: 1.25rem;
   margin-bottom: 0.5em;
+}
+
+ul {
+  list-style: disc inside;
 }

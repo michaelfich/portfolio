@@ -1,0 +1,9 @@
+ol.blogs {
+  list-style: decimal;
+  padding-left: 2.5rem;
+  .date {
+    color: $medium-gray;
+    font-size: 0.7em;
+    font-style: oblique;
+  }
+}
