@@ -5,12 +5,12 @@
 <section class="blogs">
   <% if @blogs.any? %>
     <ul>
-      <% @blogs.each do |blog| %>
-        <li>
-          <span class="title"><%= link_to blog.title, edit_admin_blog_path(blog) %></span>
-          <span class="date"><%= blog.published_at.in_time_zone("Eastern Time (US & Canada)").strftime("%B %e, %Y") %></span>
-        </li>
-      <% end %>
+    <% @blogs.each do |blog| %>
+      <li>
+        <span class="title"><%= link_to blog.title, edit_admin_blog_path(blog) %></span>
+        <span class="date"><%= blog.published_at.in_time_zone("Eastern Time (US & Canada)").strftime("%B %e, %Y") %></span>
+      </li>
+    <% end %>
     </ul>
   <% else %>
     <p>There aren't any blogs published yet.</p>

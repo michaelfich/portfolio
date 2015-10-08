@@ -4,7 +4,7 @@ class BlogsController < ApplicationController
   end
 
   def show
-    @blog = Blog.find(params[:id])
+    @blog = Blog.find_by(slug: params[:slug])
     @comments = Comment.where(blog_id: @blog.id)
     @comment = Comment.new
   end

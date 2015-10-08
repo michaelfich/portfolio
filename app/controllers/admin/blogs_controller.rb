@@ -45,10 +45,10 @@ class Admin::BlogsController < AdminController
 
   private
     def set_blog
-      @blog = Blog.find(params[:id])
+      @blog = Blog.find_by(slug: params[:slug])
     end
 
     def blog_params
-      params.require(:blog).permit(:title, :body)
+      params.require(:blog).permit(:title, :slug, :body)
     end
 end

@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   root to: 'pages#home'
 
   resources :projects, only: [:index, :show]
-  resources :blogs, only: [:index, :show] do
+  resources :blogs, only: [:index, :show], param: :slug do
     resources :comments, only: [:create]
   end
 
@@ -16,7 +16,7 @@ Rails.application.routes.draw do
   resources :admin, only: :index
 
   namespace :admin do
-    resources :blogs
+    resources :blogs, param: :slug
     resources :projects
   end
 end

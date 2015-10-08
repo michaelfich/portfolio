@@ -32,6 +32,7 @@ Project.create({
 
 Blog.create({
   title: "My Path to Bitmaker Labs",
+  slug: "path-to-bitmaker",
   user: User.first,
   published_at: Time.new(2015, 6, 17),
   body: "A couple of months ago, in April, I had just finished celebrating my 31st birthday. Like many people who set goals for themselves, either on a birthday, New Years or other milestones on the calendar, I too took a look at where I wanted to be when my next birthday comes around.
@@ -71,6 +72,7 @@ Thanks for reading! :)"
 
 Blog.create({
   title: "Update: Two weeks in at Bitmaker Labs!",
+  slug: "first-two-weeks",
   user: User.first,
   published_at: Time.new(2015, 6, 19),
   body: "It's Friday, and I just finished my assignment for the second week at Bitmaker Labs. It's a CRM application to allow a user to store their contacts in a database, with CRUD operations (Create, Read, Update and Delete).
@@ -108,6 +110,7 @@ I hear we're diving into Rails next week, which should be a blast! I'll post aga
 
 Blog.create({
   title: "Intro to Ruby on Rails",
+  slug: "intro-to-rails",
   user: User.first,
   published_at: Time.new(2015, 7, 5),
   body: "It's been a busy couple of weeks! Over weeks three and four at Bitmaker Labs, we dove into learning and using Ruby on Rails after learning the fundamentals of Ruby, HTML, CSS and working with Sinatra and DataMapper as well.
@@ -131,6 +134,7 @@ Please do feel free to leave your comments, feedback or suggestions. I'd love to
 
 Blog.create({
   title: "Rainforest",
+  slug: "rainforest",
   user: User.first,
   published_at: Time.new(2015, 7, 6),
   body: "In my last blog post, I provided a link to my first Ruby on Rails project, Picgur, a rudimentary clone of Imgur. A website which users can provide links to an image hosted online, give it a title and description.
@@ -148,6 +152,7 @@ Thanks for reading!"
 
 Blog.create({
   title: "TDD in Rails and Javascript Fundamentals",
+  slug: "tdd-and-javascript-fundamentals",
   user: User.first,
   published_at: Time.new(2015, 7, 8),
   body: "Week 5 at Bitmaker Labs has been a blast!
@@ -171,6 +176,7 @@ If you'd like to connect, please feel free to hit me up on Twitter using @michae
 
 Blog.create({
   title: "Getting Started with Javascript",
+  slug: "intro-to-javascript",
   user: User.first,
   published_at: Time.new(2015, 7, 20),
   body: "It’s been a little less than two weeks since my last blog, and during that time I’ve been learning a lot.
