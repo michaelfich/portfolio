@@ -13,6 +13,6 @@ class ApplicationController < ActionController::Base
   end
 
   def recent_blogs
-    @recent_blogs = Blog.order(published_at: :desc).limit(6)
+    @recent_blogs = Blog.where(published: true).order(published_at: :desc).limit(6)
   end
 end
