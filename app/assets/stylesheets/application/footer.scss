@@ -5,14 +5,31 @@ footer.main {
 
   div {
     color: $light-gray;
+    section {
+      color: lighten($dark-gray, 15%);
+      h1 {
+        font-size: 3em;
+        margin-bottom: 0;
+      }
+      h2 {
+        font-size: 1.25em;
+        font-family: $base-font-family;
+      }
+      @include media($small-screen-only) {
+        h1 {
+          font-size: 2em;
+        }
+        h2 {
+          font-size: 1.15em;
+        }
+      }
+    }
     header {
       font-size: 0.85rem;
       text-transform: uppercase;
       font-weight: bold;
       color: $medium-gray;
       margin-bottom: 0.5rem;
-      // padding-bottom: 0.5rem;
-      // border-bottom: 1px solid shade($medium-gray, 20%);
     }
     a {
       color: $light-gray;
