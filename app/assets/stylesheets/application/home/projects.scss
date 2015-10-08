@@ -46,6 +46,13 @@ section.featured.projects {
 
     .description {
       font-size: 0.85rem;
+      margin: 0;
+      p:first-child {
+        margin-top: 0;
+      }
+      p:last-child {
+        margin-bottom: 0;
+      }
     }
   }
 }
