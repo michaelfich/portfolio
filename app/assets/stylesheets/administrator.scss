@@ -1,9 +1,9 @@
 @import 'style';
-
 @import 'administrator/refills/switch';
 
 @import 'administrator/nav';
 @import 'administrator/form';
+@import 'administrator/flash';
 
 .container {
   @include outer-container;

@@ -1,0 +1,34 @@
+$alert-color: #F44336;
+$notice-color: #03A9F4;
+$success-color: #8BC34A;
+
+div.flash-alert,
+div.flash-notice,
+div.flash-success {
+  background-color: $light-gray;
+  border-bottom: 1px solid $dark-gray;
+  color: $dark-gray;
+  text-align: center;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  font-size: 0.9rem;
+}
+
+div.flash-alert {
+  border-color: shade($alert-color, 20%);
+  color: shade($alert-color, 20%);
+  background-color: lighten($alert-color, 20%);
+}
+
+div.flash-notice {
+  border-color: shade($notice-color, 20%);
+  color: shade($notice-color, 20%);
+  background-color: lighten($notice-color, 20%);
+}
+
+div.flash-success {
+  border-color: shade($success-color, 20%);
+  color: shade($success-color, 20%);
+  background-color: lighten($success-color, 20%);
+}
+
