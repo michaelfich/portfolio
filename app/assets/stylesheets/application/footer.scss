@@ -1,13 +1,54 @@
 footer.main {
   margin-top: 3em;
-  padding: 1em 0 5em;
-  background: shade($action-color, 20%);
+  padding: 2.5em 0 5em;
+  background: $dark-gray;
 
   div {
+    color: $light-gray;
+    header {
+      font-size: 0.85rem;
+      // text-transform: uppercase;
+      margin-bottom: 0.5rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 1px solid shade($medium-gray, 20%);
+    }
+    a {
+      color: $light-gray;
+      font-size: 0.85rem;
+      &:hover {
+        color: $light-gray;
+        border-bottom: 1px solid $light-gray;
+      }
+    }
+    aside.contact {
+      i {
+        display: inline-block;
+        width: 1em;
+        text-align: center;
+        margin-right: 0.25rem;
+      }
+    }
+    section p {
+      font-size: 0.85rem;
+    }
+
     @include outer-container;
-    color: white;
     @include media($medium-screen-down) {
       margin: 0 2rem 3rem;
     }
+    @include media($medium-screen-down) {
+      aside > header {
+        padding-top: 1.5rem;
+      }
+    }
+    @include media($large-screen-up) {
+      section {
+        @include span-columns(6 of 12);
+      }
+      aside {
+        @include span-columns(3 of 12);
+      }
+    }
+
   }
 }

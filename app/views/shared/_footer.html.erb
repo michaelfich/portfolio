@@ -1,5 +1,33 @@
 <footer class="main">
   <div>
-    © Michael Fich 2015
+    <section>
+      <header>© Michael Fich 2015</header>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas tenetur aliquam dolores assumenda nulla, quibusdam aperiam quae vero iste earum ipsam natus accusamus aut placeat molestiae quisquam molestias enim deleniti.
+      </p>
+    </section>
+    <aside class="contact">
+      <header>Contact</header>
+      <ul>
+        <li>
+          <%= mail_to 'michael@michaelfich.com' do %>
+            <i class="fa fa-envelope"></i>
+            <span>Email</span>
+          <% end %>
+        </li>
+        <%= render 'shared/contact' %>
+      </ul>
+    </aside>
+    <aside>
+      <header>Blogs</header>
+      <ul>
+        <li><a href="#">Email</a></li>
+        <li><a href="#">Github</a></li>
+        <li><a href="#">Twitter</a></li>
+        <li><a href="#">YouTube</a></li>
+        <li><a href="#">LinkedIn</a></li>
+        <li><a href="#">Google+</a></li>
+      </ul>
+    </aside>
   </div>
 </footer>
