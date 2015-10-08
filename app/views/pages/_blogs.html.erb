@@ -13,7 +13,7 @@
         </header>
 
         <article>
-          <%= truncate(blog.body, length: 400) do %>
+          <%= truncate(simple_format(blog.body), escape: false, length: 400) do %>
             <%= link_to "Continue reading", blog  %>
           <% end %>
         </article>
