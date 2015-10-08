@@ -6,41 +6,25 @@
   }
 
   & > .project-list > .project {
+    @include clearfix;
     display: block;
     border-radius: 2px;
     cursor: pointer;
-    margin: 2em 0;
-
-    &:first-child {
-      margin-top: 0;
-    }
-
-    &:last-child {
-      margin-bottom: 0;
-    }
-
-    @include clearfix;
-
+    margin: 1em 0;
     aside.thumbnail {
-      height: 12em;
-      background: yellow;
-
       @include media($large-screen-up) {
         @include span-columns(4 of 12);
       }
-
       img {
         width: 100%;
         height: 100%;
         background-color: #efefef;
       }
     }
-
     .content {
       @include media($large-screen-up) {
         @include span-columns(8 of 12);
       }
-
       header {
         font-size: 1.25em;
         font-weight: 500;
@@ -48,12 +32,10 @@
         padding: 0 0 0.5;
         color: $action-color;
         font-family: $heading-font-family;
-
         @include media($medium-screen-down) {
           font-size: 1.4rem;
         }
       }
-
       article {
         color: $dark-gray;
       }
@@ -63,7 +45,6 @@
 
 .project {
   @include outer-container;
-
   .image {
     @include clearfix;
     img {
@@ -73,7 +54,6 @@
       background-color: $light-gray;
     }
   }
-
   article {
     margin: 1em 0;
   }

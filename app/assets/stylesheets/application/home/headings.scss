@@ -2,13 +2,14 @@
 .recent.blogs {
   h3 {
     padding: 2em 0 0.25em;
-    font-size: 1.4em;
+    font-size: 1.35em;
     font-weight: 900;
     font-family: $base-font-family;
     border-bottom: 1px solid $light-gray;
     margin: 0 0 1rem;
     line-height: 1.5;
     letter-spacing: -1px;
+    text-transform: uppercase;
 
     @include media($medium-screen-down) {
       margin: 0 0 0.65rem;
@@ -16,7 +17,7 @@
 
     i {
       display: inline-block;
-      background-color: $dark-gray;
+      background-color: lighten($dark-gray, 10%);
       border-radius: 3px;
       padding: 0.5em;
       color: #ffffff;

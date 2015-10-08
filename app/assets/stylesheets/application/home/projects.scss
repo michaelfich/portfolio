@@ -27,12 +27,11 @@ section.featured.projects {
     }
 
     .thumbnail {
-      height: 12em;
-
+      width: 100%;
+      min-height: 200px;
       img {
         width: 100%;
-        height: 100%;
-        background-color: #efefef;
+        display: block;
       }
     }
 

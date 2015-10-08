@@ -5,8 +5,8 @@ class CreateProjects < ActiveRecord::Migration
       t.text :description
       t.string :url
       t.string :repo
-      t.string :image_preview
-      t.string :image_large
+      t.string :image_preview,  default: 'default_preview.jpg'
+      t.string :image_large,    default: 'default_large.jpg'
       t.boolean :featured
     end
   end
