@@ -32,6 +32,7 @@ footer.main {
       margin-bottom: 0.5rem;
     }
     a {
+      @include transition(all 0.5s ease);
       display: inline-block;
       margin: 0.2em 0 0.2em -11px;
       border-left: 3px solid transparent;
