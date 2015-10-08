@@ -2,7 +2,6 @@ Rails.application.routes.draw do
   root to: 'pages#home'
 
   resources :projects, only: [:index, :show]
-  resources :messages, path: 'contact', only: [:index, :create]
   resources :blogs, only: [:index, :show] do
     resources :comments, only: [:create]
   end
@@ -19,6 +18,5 @@ Rails.application.routes.draw do
   namespace :admin do
     resources :blogs
     resources :projects
-    resources :messages, only: [:index, :show]
   end
 end

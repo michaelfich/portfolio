@@ -7,7 +7,7 @@ nav {
         font-size: 0.85rem;
         display: inline-block;
         padding: 1em 2em;
-        background: lighten($action-color, 20%);
+        background: $action-color;
         color: $dark-gray;
         &:hover {
           color: $dark-gray;
