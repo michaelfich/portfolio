@@ -6,11 +6,12 @@ nav {
       a {
         font-size: 0.85rem;
         display: inline-block;
-        padding: 1em 2em;
+        padding: 0.6em 1.5em;
         background: $action-color;
-        color: $dark-gray;
+        border-radius: 2px;
+        color: #ffffff;
         &:hover {
-          color: $dark-gray;
+          color: #ffffff;
           background: shade($action-color, 20%);
         }
       }

@@ -1,6 +1,6 @@
 <h3>About Me</h3>
 
-<%= form_for @about, url: admin_about_update_path do |f| %>
+<%= form_for @about, url: admin_about_update_path, html: { class: 'edit_about', id: 'edit_about' } do |f| %>
   <div class="field">
     <%= f.text_area :text %>
   </div>

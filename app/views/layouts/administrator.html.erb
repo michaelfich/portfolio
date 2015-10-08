@@ -3,8 +3,8 @@
 <head>
   <title>Michael Fich | Ruby on Rails Developer</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <%= stylesheet_link_tag    'administrator', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'administrator', 'data-turbolinks-track' => true %>
+  <%= stylesheet_link_tag    'admin', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'admin', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
@@ -26,10 +26,30 @@
 
     <nav>
       <ul>
-        <li><%= link_to "Home", root_url %></li>
-        <li><%= link_to "About", admin_about_edit_path %></li>
-        <li><%= link_to "Projects", admin_projects_path %></li>
-        <li><%= link_to "Blogs", admin_blogs_path %></li>
+        <li>
+          <%= link_to root_url do %>
+            <i class="fa fa-home"></i>
+            <span>Home</span>
+          <% end %>
+        </li>
+        <li>
+          <%= link_to admin_about_edit_path do %>
+            <i class="fa fa-user"></i>
+            <span>About</span>
+          <% end %>
+        </li>
+        <li>
+          <%= link_to admin_projects_path do %>
+            <i class="fa fa-folder-open"></i>
+            <span>Projects</span>
+          <% end %>
+        </li>
+        <li>
+          <%= link_to admin_blogs_path do %>
+            <i class="fa fa-book"></i>
+            <span>Blogs</span>
+          <% end %>
+        </li>
       </ul>
     </nav>
 

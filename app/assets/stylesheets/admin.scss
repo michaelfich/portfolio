@@ -1,9 +1,10 @@
 @import 'style';
-@import 'administrator/refills/switch';
+@import 'admin/refills/switch';
 
-@import 'administrator/nav';
-@import 'administrator/form';
-@import 'administrator/flash';
+@import 'admin/nav';
+@import 'admin/form';
+@import 'admin/flash';
+@import 'admin/about';
 
 .container {
   @include outer-container;
