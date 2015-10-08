@@ -19,7 +19,7 @@ h3 {
   font-family: $heading-font-family;
   font-size: 1.4rem;
   font-weight: 700;
-  margin-bottom: 0.5em;
+  margin-bottom: 0.5rem;
 
   @include media($medium-screen) {
     font-size: 2.6em;

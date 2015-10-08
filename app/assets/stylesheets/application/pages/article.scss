@@ -117,3 +117,12 @@ article.blog {
     font-family: $sans-serif;
   }
 }
+
+article.blog {
+  h3 {
+    margin-bottom: 0;
+  }
+  p.date {
+    margin-bottom: em(20);
+  }
+}

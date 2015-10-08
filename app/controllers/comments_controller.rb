@@ -1,6 +1,6 @@
 class CommentsController < ApplicationController
   def create
-    @blog = Blog.find(params[:blog_id])
+    @blog = Blog.find_by(slug: params[:blog_slug])
     @comment = Comment.new(comment_params)
     @comment.blog = @blog
     @comment.user = current_user
