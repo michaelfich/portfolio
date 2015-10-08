@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+
   root to: 'pages#home'
 
   resources :projects, only: [:index, :show]
@@ -18,5 +19,7 @@ Rails.application.routes.draw do
   namespace :admin do
     resources :blogs, param: :slug
     resources :projects
+    get 'about/edit'
+    post 'about/update'
   end
 end

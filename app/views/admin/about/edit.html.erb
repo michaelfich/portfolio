@@ -1,0 +1,10 @@
+<h3>About Me</h3>
+
+<%= form_for @about, url: admin_about_update_path do |f| %>
+  <div class="field">
+    <%= f.text_area :text %>
+  </div>
+  <div class="field">
+    <%= f.button "Save" %>
+  </div>
+<% end -%>
