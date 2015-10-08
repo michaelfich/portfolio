@@ -21,12 +21,9 @@
     <aside>
       <header>Recent Posts</header>
       <ul>
-        <li><a href="#">Post #6</a></li>
-        <li><a href="#">Post #5</a></li>
-        <li><a href="#">Post #4</a></li>
-        <li><a href="#">Post #3</a></li>
-        <li><a href="#">Post #2</a></li>
-        <li><a href="#">Post #1</a></li>
+      <% @recent_blogs.each do |blog| %>
+        <li><%= link_to truncate(blog.title, length: 35), blog %></li>
+      <% end %>
       </ul>
     </aside>
   </div>

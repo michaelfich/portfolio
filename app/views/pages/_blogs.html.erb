@@ -2,7 +2,7 @@
   <h3>Recent Blogs</h3>
 
   <div class="blog-list">
-    <% @blogs.each do |blog| %>
+    <% @recent_blogs.first(2).each do |blog| %>
       <div class="blog">
         <aside>
           <%= blog.published_at.in_time_zone("Eastern Time (US & Canada)").strftime("%B %e, %Y") %>

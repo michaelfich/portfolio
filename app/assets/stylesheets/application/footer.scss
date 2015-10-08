@@ -7,10 +7,12 @@ footer.main {
     color: $light-gray;
     header {
       font-size: 0.85rem;
-      // text-transform: uppercase;
+      text-transform: uppercase;
+      font-weight: bold;
+      color: $medium-gray;
       margin-bottom: 0.5rem;
-      padding-bottom: 0.5rem;
-      border-bottom: 1px solid shade($medium-gray, 20%);
+      // padding-bottom: 0.5rem;
+      // border-bottom: 1px solid shade($medium-gray, 20%);
     }
     a {
       color: $light-gray;
