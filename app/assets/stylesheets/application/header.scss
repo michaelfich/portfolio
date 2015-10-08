@@ -54,8 +54,7 @@
   h2 {
     margin: 0;
     font-size: 1.1rem;
-    font-family: $heading-font-family;
-    font-weight: 300;
+    font-weight: 500;
   }
 
   @include media($medium-screen-down) {
