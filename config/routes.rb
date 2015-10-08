@@ -20,6 +20,6 @@ Rails.application.routes.draw do
     resources :blogs, param: :slug
     resources :projects, param: :slug
     get 'about/edit'
-    post 'about/update'
+    patch 'about/update'
   end
 end
