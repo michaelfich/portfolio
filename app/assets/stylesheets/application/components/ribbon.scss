@@ -1,19 +1,15 @@
 .project > .image,
 .project > .thumbnail {
   position: relative;
-
   .in-development {
     $action-color: #477dca !default;
     $ribbon-background: $action-color;
     $ribbon-size: 110px;
-    // $ribbon-size: 85px;
-
     @include size($ribbon-size);
     overflow: hidden;
     position: absolute;
     right: -1px;
     top: -1px;
-
     .ribbon {
       @include transform(rotate(45deg));
       background-color: $ribbon-background;

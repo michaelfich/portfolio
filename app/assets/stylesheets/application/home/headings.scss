@@ -2,19 +2,18 @@
 .recent.blogs {
   h3 {
     padding: 2em 0 0.25em;
-    font-size: 1.35em;
-    font-weight: 900;
-    font-family: $base-font-family;
+    font-size: 1.05rem;
+    font-weight: 500;
+    font-family: $heading-font-family;
     border-bottom: 1px solid $light-gray;
+    color: lighten($dark-gray, 10%);
     margin: 0 0 1rem;
     line-height: 1.5;
-    letter-spacing: -1px;
+    letter-spacing: 2px;
     text-transform: uppercase;
-
     @include media($medium-screen-down) {
       margin: 0 0 0.65rem;
     }
-
     i {
       display: inline-block;
       background-color: lighten($dark-gray, 10%);
@@ -31,7 +30,6 @@ h3 {
   font-size: 1.4rem;
   font-weight: 700;
   margin-bottom: 0.5rem;
-
   @include media($medium-screen) {
     font-size: 2.6em;
   }
