@@ -32,11 +32,15 @@ footer.main {
       margin-bottom: 0.5rem;
     }
     a {
+      display: inline-block;
+      padding-left: 8px;
+      margin-left: -11px;
+      border-left: 3px solid transparent;
       color: $light-gray;
       font-size: 0.85rem;
       &:hover {
         color: $light-gray;
-        border-bottom: 1px solid $light-gray;
+        border-left: 3px solid $light-gray;
       }
     }
     aside.contact {
