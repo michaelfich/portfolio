@@ -10,11 +10,6 @@
     <% end %>
   </div>
 
-  <header class="title">
-    <%= project.title %>
-  </header>
-
-  <article class="description">
-    <%= simple_format(project.description) %>
-  </article>
+  <header class="title"><%= project.title %></header>
+  <article class="summary"><%= project.summary %></article>
 <% end %>

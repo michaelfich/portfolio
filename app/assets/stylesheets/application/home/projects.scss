@@ -3,6 +3,9 @@ section.featured.projects {
   @include media($medium-screen-down) {
     padding: 0 1rem;
   }
+  .project-list {
+    @include clearfix;
+  }
   .project {
     display: block;
     color: $dark-gray;
@@ -29,9 +32,10 @@ section.featured.projects {
       padding-top: 0.3em;
       color: $action-color;
     }
-    .description {
+    .summary {
       font-size: 0.85rem;
       margin: 0;
+      background: #ffffff;
       p:first-child {
         margin-top: 0;
       }

@@ -10,11 +10,7 @@
         <aside>
           <%= blog.published_at.in_time_zone("Eastern Time (US & Canada)").strftime("%B %e, %Y") %>
         </aside>
-
-        <header>
-          <%= link_to blog.title, blog %>
-        </header>
-
+        <header><%= link_to blog.title, blog %></header>
         <article>
           <%= truncate(simple_format(blog.body), escape: false, length: 400) do %>
             <%= link_to "Continue reading", blog  %>
