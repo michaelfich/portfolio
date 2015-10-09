@@ -1,0 +1,5 @@
+<% if project.image.file? %>
+  <%= image_tag project.image.url %>
+<% else %>
+  <%= image_tag "default_preview.jpg" %>
+<% end %>

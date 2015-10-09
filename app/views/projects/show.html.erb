@@ -2,7 +2,7 @@
   <h3><%= @project.title %></h3>
 
   <div class="image">
-    <%= image_tag @project.image_large %>
+    <%= render partial: 'projects/image', locals: { project: @project } %>
     <% unless @project.completed? %>
       <aside class="in-development">
         <div class="ribbon">

@@ -1,0 +1,11 @@
+<% if @project.errors.any? %>
+  <div class="errors">
+    <h4>Errors</h4>
+
+    <ul class="error-list">
+    <% @project.errors.full_messages.each do |message| %>
+      <li><%= message %></li>
+    <% end %>
+    </ul>
+  </div>
+<% end %>

@@ -1,0 +1,8 @@
+.errors {
+  padding: 1.5rem 3rem;
+  margin-bottom: 2rem;
+  border-radius: 2px;
+  border-color: shade($alert-color, 20%);
+  color: shade($alert-color, 20%);
+  background-color: lighten($alert-color, 20%);
+}

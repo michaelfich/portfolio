@@ -1,6 +1,6 @@
 <%= link_to project, class: 'project' do %>
   <div class="thumbnail">
-    <%= image_tag(project.image_preview) %>
+    <%= render partial: 'projects/image', locals: { project: project } %>
     <% unless project.completed? %>
       <aside class="in-development">
         <div class="ribbon">

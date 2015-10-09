@@ -2,29 +2,21 @@
   <h3>Projects</h3>
 
   <div class="project-list">
-    <% @projects.each do |project| %>
-      <%= link_to project, class: 'project' do %>
-        <aside class="thumbnail">
-          <%= image_tag project.image_preview %>
-          <% unless project.completed? %>
-            <aside class="in-development">
-              <div class="ribbon">
-                In Development
-              </div>
-            </aside>
-          <% end %>
+  <% @projects.each do |project| %>
+    <%= link_to project, class: 'project' do %>
+      <aside class="thumbnail">
+        <%= render partial: 'projects/image', locals: { project: project } %>
+        <% unless project.completed? %>
+        <aside class="in-development">
+          <div class="ribbon">In Development</div>
         </aside>
-
-        <div class="content">
-          <header>
-            <%= project.title %>
-          </header>
-
-          <article>
-            <%= project.description %>
-          </article>
-        </div>
-      <% end %>
+        <% end %>
+      </aside>
+      <div class="content">
+        <header><%= project.title %></header>
+        <article><%= project.description %></article>
+      </div>
     <% end %>
+  <% end %>
   </div>
 </section>

@@ -32,7 +32,7 @@ class Admin::ProjectsController < AdminController
       redirect_to admin_projects_path
     else
       flash[:alert] = "There was an error saving the project."
-      render :new
+      render :edit
     end
   end
 
@@ -48,6 +48,6 @@ class Admin::ProjectsController < AdminController
     end
 
     def project_params
-      params.require(:project).permit(:title, :slug, :order, :description, :url, :repo, :image_preview, :image_large, :featured, :display, :permitted, :completed)
+      params.require(:project).permit(:title, :slug, :image, :order, :description, :url, :repo, :image_preview, :image_large, :featured, :display, :permitted, :completed)
     end
 end

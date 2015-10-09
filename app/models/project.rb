@@ -1,6 +1,6 @@
 class Project < ActiveRecord::Base
-  has_attached_file :preview
-  validates_attachment_content_type :preview, content_type: { content_type: ["image/jpeg", "image/gif", "image/png"] }
+  has_attached_file :image
+  validates_attachment_content_type :image, content_type: /\Aimage\/.*\Z/
 
   def to_param
     slug
