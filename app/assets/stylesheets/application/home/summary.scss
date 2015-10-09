@@ -1,8 +1,8 @@
 $summary-border-color: $medium-gray;
 
 .summary {
-  // background-color: lighten($action-color, 20%);
   background-color: $light-gray;
+  margin-bottom: 1em;
   article {
     @include outer-container;
     padding-top: 2.5em;
