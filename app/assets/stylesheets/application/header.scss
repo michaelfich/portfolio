@@ -2,22 +2,16 @@
   @include outer-container;
   position: relative;
 }
-
 .hero {
   @include outer-container;
-  // background: white;
-
   .contact {
     margin-top: 1em;
     li {
       display: inline-block;
       margin: 1px;
       @include media($large-screen-up) {
-        &:first-child {
-          margin-left: 0;
-        }
+        &:first-child { margin-left: 0; }
       }
-
       a {
         display: inline-block;
         background-color: $action-color;
@@ -27,7 +21,6 @@
         line-height: 2em;
         border-radius: 2px;
         text-align: center;
-
         &.twitter   { background-color: #00aced; }
         &.linkedin  { background-color: #007bb5; }
         &.google    { background-color: #dd4b39; }
@@ -39,7 +32,6 @@
       }
     }
   }
-
   h1 {
     font-size: 2.5rem;
     letter-spacing: -1px;
@@ -50,16 +42,13 @@
       color: $dark-gray;
     }
   }
-
   h2 {
     margin: 0;
     font-size: 1.1rem;
     font-weight: 500;
   }
-
   @include media($medium-screen-down) {
     margin: 3em 0;
-
     .avatar {
       display: block;
       width: 10em;
@@ -69,16 +58,13 @@
       background-color: white;
       border: 1px solid $medium-gray;
     }
-
     h1, h2, .contact {
       @include span-columns(4 of 4);
       text-align: center;
     }
   }
-
   @include media($large-screen-up) {
     margin: 3em 0;
-
     .avatar {
       width: 150px;
       float: left;
@@ -86,7 +72,6 @@
       border-radius: 5px;
       box-shadow: 0 2px 10px $medium-gray;
     }
-
     h1 {
       margin-top: 5px;
       font-size: 3.65em;
