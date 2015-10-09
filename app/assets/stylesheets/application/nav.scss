@@ -1,4 +1,5 @@
-$contact-color: #4CAF50;
+// $contact-color: #4CAF50;
+$contact-color: $blue;
 
 .primary {
   @include media($medium-screen-down) {
