@@ -3,6 +3,20 @@ footer.main {
   padding: 2.5em 0 5em;
   background: $dark-gray;
   div {
+    @include outer-container;
+    @include media($medium-screen-down) {
+      margin: 0 0 3rem;
+      padding: 0 1rem;
+    }
+    @include media($medium-screen-down) {
+      aside > header {
+        padding-top: 1.5rem;
+      }
+    }
+    @include media($large-screen-up) {
+      section { @include span-columns(6 of 12); }
+      aside   { @include span-columns(3 of 12); }
+    }
     color: $light-gray;
     section {
       color: lighten($dark-gray, 15%);
@@ -54,24 +68,5 @@ footer.main {
     section p {
       font-size: 0.85rem;
     }
-
-    @include outer-container;
-    @include media($medium-screen-down) {
-      margin: 0 2rem 3rem;
-    }
-    @include media($medium-screen-down) {
-      aside > header {
-        padding-top: 1.5rem;
-      }
-    }
-    @include media($large-screen-up) {
-      section {
-        @include span-columns(6 of 12);
-      }
-      aside {
-        @include span-columns(3 of 12);
-      }
-    }
-
   }
 }
