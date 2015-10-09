@@ -1,16 +1,19 @@
 <div class="project">
   <h3><%= @project.title %></h3>
 
-  <div class="image">
-    <%= render partial: 'projects/image', locals: { project: @project } %>
-    <% unless @project.completed? %>
-      <aside class="in-development">
-        <div class="ribbon">
-          In Development
-        </div>
-      </aside>
-    <% end %>
+  <div class="sidebar">
+    <div class="image">
+      <%= render partial: 'projects/image', locals: { project: @project } %>
+      <% unless @project.completed? %>
+        <aside class="in-development">
+          <div class="ribbon">
+            In Development
+          </div>
+        </aside>
+      <% end %>
+    </div>
   </div>
+
 
   <article>
     <%= simple_format(@project.description) %>

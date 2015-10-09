@@ -42,14 +42,15 @@
 
 .project {
   @include outer-container;
-  .image {
+  .sidebar {
     @include span-columns(3 of 12);
     @include omega;
     @include clearfix;
     float: right;
-    img {
-      @include omega;
-      background-color: $light-gray;
+    .image {
+      img {
+        background-color: $light-gray;
+      }
     }
   }
   article {

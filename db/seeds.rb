@@ -12,7 +12,6 @@ Project.create({
   order: 3,
   url: 'http://www.bitvestr.com',
   repo: 'https://github.com/michaelfich/bitvestr',
-  image_preview: 'bitvestr_preview.jpg'
   featured: true,
   description: 'Over the final two weeks at Bitmaker Labs, I worked with Lucas Zarnett to create Bitvestr.  Bitvestr is a web app to help people develop a trading strategy for buying and selling Bitcoin.',
 })
@@ -23,7 +22,6 @@ Project.create({
   order: 1,
   url: 'http://tictactoe.michaelfich.com',
   repo: 'https://github.com/michaelfich/tictactoe',
-  image_preview: 'tictactoe_preview.jpg'
   featured: true,
   description:  'Using the upcoming Batman vs. Superman: Dawn of Justice movie as inpiration for my theme, I completed this Bitmaker Labs javascript fundamentals assignment with a bit of my own personal style added to it.',
 })
@@ -34,7 +32,6 @@ Project.create({
   order: 2,
   url: 'http://rainforest.michaelfich.com',
   repo: 'https://github.com/michaelfich/rainforest',
-  image_preview: 'rainforest_preview.jpg'
   featured: true,
   description: 'Rainforest is a Bitmaker Labs assignment which uses Amazon\'s website as inspiration and helps practice both Rails and Javascript fundamentals learned such as associations between different Rails models and pagination, as well as using AJAX to add features such as a search option to filter products, infinite scroll, and posting reviews.',
 })
