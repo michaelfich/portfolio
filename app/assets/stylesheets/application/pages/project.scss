@@ -1,5 +1,23 @@
 div.show.project {
   @include outer-container;
+  @include media($medium-screen-down) {
+    padding: 0 1rem;
+    & > aside {
+      margin-bottom: 2rem;
+      li {
+        line-height: 2rem;
+        margin: 1px 0;
+      }
+      i {
+        display: block;
+        float: left;
+        margin: 0 10px 0 0;
+        width: 2rem;
+        text-align: center;
+        font-size: 2rem;
+      }
+    }
+  }
   @include media($large-screen-up) {
     & > aside {
       @include span-columns(4 of 12);
@@ -11,9 +29,9 @@ div.show.project {
     }
   }
   & > aside {
-    border: 1px solid $medium-gray;
-    border-radius: 2px;
-    background: white;
-    padding: 1rem;
+    // border: 1px solid $medium-gray;
+    // border-radius: 2px;
+    // background: white;
+    // padding: 1rem;
   }
 }
