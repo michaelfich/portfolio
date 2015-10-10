@@ -16,11 +16,12 @@
     <ul class="links">
       <li class="github">
         <i class="fa fa-github"></i>
-        michaelfich / <%= link_to @project.repo, "https://github.com/michaelfich/#{@project.repo}" %>
+        michaelfich /
+        <%= link_to @project.repo, "https://github.com/michaelfich/#{@project.repo}", target: "_blank" %>
       </li>
       <li class="url">
         <i class="fa fa-link"></i>
-        <%= link_to @project.web_address, @project.url %>
+        <%= link_to @project.web_address, @project.url, target: "_blank" %>
       </li>
     </ul>
   </aside>
