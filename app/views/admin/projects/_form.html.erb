@@ -20,7 +20,11 @@
     <%= f.text_field :url %>
   </div>
   <div class="field">
-    <%= f.label :repo, 'Github Repo' %>
+    <%= f.label :web_address, 'Display Web Address' %>
+    <%= f.text_field :web_address %>
+  </div>
+  <div class="field">
+    <%= f.label :repo, 'GitHub Repository' %>
     <%= f.text_field :repo, value: 'https://github.com/michaelfich/' %>
   </div>
   <div class="field">
