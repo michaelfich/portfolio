@@ -1,3 +1,3 @@
 $(document).on('ready page:load', function() {
-  // content here
+  console.log('Accessing administrator interface');
 });
