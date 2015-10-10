@@ -39,22 +39,3 @@
     }
   }
 }
-
-.project {
-  @include outer-container;
-  .sidebar {
-    @include span-columns(3 of 12);
-    @include omega;
-    @include clearfix;
-    float: right;
-    .image {
-      img {
-        background-color: $light-gray;
-      }
-    }
-  }
-  article {
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-  }
-}

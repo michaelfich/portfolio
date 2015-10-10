@@ -1,36 +1,32 @@
-<div class="project">
+<div class="show project">
   <h3><%= @project.title %></h3>
 
-  <div class="sidebar">
+  <aside class="thumbnail">
     <div class="image">
       <%= render partial: 'projects/image', locals: { project: @project } %>
       <% unless @project.completed? %>
-        <aside class="in-development">
-          <div class="ribbon">
-            In Development
-          </div>
-        </aside>
-      <% end %>
+      <aside class="in-development">
+        <div class="ribbon">
+          In Development
+        </div>
+      </aside>
+    <% end %>
     </div>
-  </div>
 
+    <ul class="links">
+      <li class="github">
+        <i class="fa fa-github"></i>
+        michaelfich / <%= link_to @project.repo, @project.repo %>
+      </li>
+      <li class="url">
+        <i class="fa fa-link"></i>
+        <%= link_to @project.web_address, @project.url %>
+      </li>
+    </ul>
+  </aside>
 
   <article>
+    <%= simple_format(@project.summary) %>
     <%= simple_format(@project.description) %>
   </article>
-
-  <ul>
-    <li>
-      <%= link_to @project.repo do %>
-        <i class="fa fa-github"></i>
-        <span><%= @project.repo %></span>
-      <% end %>
-    </li>
-    <li>
-      <%= link_to @project.url do %>
-        <i class="fa fa-link"></i>
-        <span><%= @project.url %></span>
-      <% end %>
-    </li>
-  </ul>
 </div>
