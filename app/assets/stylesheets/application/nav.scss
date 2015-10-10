@@ -2,8 +2,8 @@
 $contact-color: $blue;
 
 .primary {
+  @include clearfix;
   @include media($medium-screen-down) {
-    @include clearfix;
     .toggle {
       width: 100%;
       height: 40px;
