@@ -1,55 +1,57 @@
 // $contact-color: #4CAF50;
 $contact-color: $blue;
+$menu-line-height: 3rem;
+$menu-font-color: #ffffff;
+$menu-font-size: 0.8rem;
 
 .primary {
   @include clearfix;
   @include media($medium-screen-down) {
     .toggle {
       width: 100%;
-      height: 40px;
-      line-height: 40px;
+      height: $menu-line-height;
+      line-height: $menu-line-height;
       text-align: left;
       position: fixed;
-      font-size: 1.2rem;
       top: 0;
       outline: none;
       background: $dark-gray;
       z-index: 100;
-      color: #ffffff;
+      color: $menu-font-color;
     }
     i {
       display: block;
       text-align: center;
       float: left;
       width: 20px;
-      height: 40px;
-      line-height: 40px;
+      height: $menu-line-height;
+      line-height: $menu-line-height;
       margin: 0 .5rem 0 1rem;
     }
     span {
       display: block;
       float: left;
       text-transform: uppercase;
-      line-height: 40px;
-      height: 40px;
-      font-size: 0.85rem;
+      line-height: $menu-line-height;
+      height: $menu-line-height;
+      font-size: $menu-font-size;
     }
     ul {
       background: $dark-gray;
       position: fixed;
       display: none;
       z-index: 50;
-      top: -5px;
-      padding-top: 45px;
+      top: 0;
+      padding-top: $menu-line-height;
       width: 100%;
       li {
         a {
           display: block;
-          height: 40px;
-          line-height: 40px;
+          height: $menu-line-height;
+          line-height: $menu-line-height;
           background: lighten($dark-gray, 5%);
           text-transform: uppercase;
-          color: $light-gray;
+          color: $menu-font-color;
           margin-bottom: 1px;
         }
       }
@@ -64,8 +66,6 @@ $contact-color: $blue;
     }
     ul {
       float: right;
-      top: 0;
-      right: 0;
       line-height: 1em;
       li {
         display: inline-block;
@@ -87,7 +87,7 @@ $contact-color: $blue;
               padding: 0.65em 1.3em;
               outline: none;
               background: $contact-color;
-              color: #fff;
+              color: $menu-font-color;
               &:hover {
                 background: lighten($contact-color, 5%);
               }

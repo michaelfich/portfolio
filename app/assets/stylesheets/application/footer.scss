@@ -2,14 +2,11 @@ footer.main {
   margin-top: 3em;
   padding: 2.5em 0 5em;
   background: $dark-gray;
-  @include media($medium-screen-down) {
-    margin-bottom: 3em;
-  }
   div {
     @include outer-container;
     @include media($medium-screen-down) {
-      margin: 0 0 3rem;
       padding: 0 1rem;
+      margin: 0 0 3rem;
     }
     @include media($medium-screen-down) {
       aside > header {

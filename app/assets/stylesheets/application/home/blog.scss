@@ -1,23 +1,14 @@
 .recent.blogs {
   @include outer-container;
-
   @include media($medium-screen-down) {
     padding: 0 1rem;
   }
-
   .blog {
     @include media($medium-screen-down) {
       margin: 1.5rem 0;
-
-      &:first-child {
-        margin-top: 0;
-      }
-
-      &:last-child {
-        margin-bottom: 0;
-      }
+      &:first-child { margin-top: 0; }
+      &:last-child  { margin-bottom: 0; }
     }
-
     @include media($large-screen-up) {
       @include span-columns(6 of 12);
     }
@@ -25,13 +16,11 @@
     aside {
       font-size: 0.8rem;
     }
-
     header {
       font-family: $heading-font-family;
       font-size: 1.15em;
       font-weight: 900;
     }
-
     article {
       font-size: 0.85rem;
     }
