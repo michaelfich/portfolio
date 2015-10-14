@@ -3,9 +3,7 @@
     <%= render partial: 'projects/image', locals: { project: project } %>
     <% unless project.completed? %>
       <aside class="in-development">
-        <div class="ribbon">
-          In Development
-        </div>
+        <span class="ribbon">In Development</span>
       </aside>
     <% end %>
   </div>

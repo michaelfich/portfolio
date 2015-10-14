@@ -13,6 +13,12 @@ footer.main {
         padding-top: 1.5rem;
       }
     }
+    @include media($medium-screen-only) {
+      padding: 0;
+      width: 400px;
+      margin-left: auto;
+      margin-right: auto;
+    }
     @include media($large-screen-up) {
       section { @include span-columns(6 of 12); }
       aside   { @include span-columns(3 of 12); }

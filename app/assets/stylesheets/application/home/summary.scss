@@ -7,6 +7,9 @@ section.summary {
     @include outer-container;
     padding-top: 2.5em;
     padding-bottom: 2.5em;
+    @include media($medium-screen-only) {
+      width: 400px;
+    }
     p {
       @include span-columns(10);
       @include shift(1);

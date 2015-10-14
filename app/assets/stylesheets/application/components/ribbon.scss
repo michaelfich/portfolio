@@ -12,6 +12,7 @@
     top: -1px;
     .ribbon {
       @include transform(rotate(45deg));
+      display: block;
       background-color: $ribbon-background;
       box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.3);
       color: #fff;

@@ -3,6 +3,10 @@
   @include media($medium-screen-down) {
     padding: 0 1rem;
   }
+  @include media($medium-screen-only) {
+    padding: 0;
+    width: 400px;
+  }
   .blog {
     @include media($medium-screen-down) {
       margin: 1.5rem 0;

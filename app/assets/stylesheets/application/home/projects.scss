@@ -3,6 +3,10 @@ section.featured.projects {
   @include media($medium-screen-down) {
     padding: 0 1rem;
   }
+  @include media($medium-screen-only) {
+    padding: 0;
+    width: 400px;
+  }
   .project-list {
     @include clearfix;
   }
