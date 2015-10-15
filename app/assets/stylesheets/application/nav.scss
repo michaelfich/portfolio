@@ -14,6 +14,7 @@ $menu-font-size: 0.8rem;
       text-align: left;
       position: fixed;
       top: 0;
+      left: 0;
       outline: none;
       background: $dark-gray;
       z-index: 100;
@@ -42,6 +43,7 @@ $menu-font-size: 0.8rem;
       display: none;
       z-index: 50;
       top: 0;
+      left: 0;
       padding-top: $menu-line-height;
       width: 100%;
       li {
