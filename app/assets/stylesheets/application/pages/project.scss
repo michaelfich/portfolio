@@ -23,15 +23,12 @@ div.show.project {
       @include span-columns(4 of 12);
       @include omega;
       float: right;
+      img {
+        width: 100%;
+      }
     }
     & > article {
       @include span-columns(8 of 12);
     }
-  }
-  & > aside {
-    // border: 1px solid $medium-gray;
-    // border-radius: 2px;
-    // background: white;
-    // padding: 1rem;
   }
 }

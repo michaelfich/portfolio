@@ -6,9 +6,7 @@
       <%= render partial: 'projects/image', locals: { project: @project } %>
       <% unless @project.completed? %>
       <aside class="in-development">
-        <div class="ribbon">
-          In Development
-        </div>
+        <span class="ribbon">In Development</span>
       </aside>
     <% end %>
     </div>
@@ -19,10 +17,12 @@
         michaelfich /
         <%= link_to @project.repo, "https://github.com/michaelfich/#{@project.repo}", target: "_blank" %>
       </li>
-      <li class="url">
-        <i class="fa fa-link"></i>
-        <%= link_to @project.web_address, @project.url, target: "_blank" %>
-      </li>
+      <% unless @project.web_address %>
+        <li class="url">
+          <i class="fa fa-link"></i>
+          <%= link_to @project.web_address, @project.url, target: "_blank" %>
+        </li>
+      <% end %>
     </ul>
   </aside>
 
