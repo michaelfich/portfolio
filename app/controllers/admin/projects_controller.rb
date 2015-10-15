@@ -9,6 +9,7 @@ class Admin::ProjectsController < AdminController
 
   def new
     @project = Project.new
+    @project.order = Project.count + 1
   end
 
   def create

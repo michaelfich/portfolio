@@ -1,29 +1,28 @@
 $tooltip-background: rgba(0,0,0,.85);
 
 @include media($large-screen-up) {
-  ul.contact {
-    a {
-      position: relative;
-      &:hover {
-        &::before {
-          content: attr(data-link);
-          display: block;
-          position: absolute;
-          top: -42px;
-          text-align: center;
-          left: calc(32px/2 - 76px/2);
-          text-transform: uppercase;
-          font-size: 0.75rem;
-          background: $tooltip-background;
-          width: 76px;
-        }
-        &::after {
-          content: '';
-          @include triangle(16px, $tooltip-background, down);
-          top: -10px;
-          left: calc(32px/2 - 16px/2);
-          position: absolute;
-        }
+  ul.contact a,
+  a.tooltip {
+    position: relative;
+    &:hover {
+      &::before {
+        content: attr(data-link);
+        display: block;
+        position: absolute;
+        top: -42px;
+        text-align: center;
+        left: calc(32px/2 - 76px/2);
+        text-transform: uppercase;
+        font-size: 0.75rem;
+        background: $tooltip-background;
+        width: 76px;
+      }
+      &::after {
+        content: '';
+        @include triangle(16px, $tooltip-background, down);
+        top: -10px;
+        left: calc(32px/2 - 16px/2);
+        position: absolute;
       }
     }
   }
