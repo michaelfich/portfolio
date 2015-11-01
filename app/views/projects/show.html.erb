@@ -17,7 +17,7 @@
         michaelfich /
         <%= link_to @project.repo, "https://github.com/michaelfich/#{@project.repo}", target: "_blank" %>
       </li>
-      <% unless @project.web_address %>
+      <% unless @project.web_address.blank? %>
         <li class="url">
           <i class="fa fa-link"></i>
           <%= link_to @project.web_address, @project.url, target: "_blank" %>
