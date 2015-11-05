@@ -4,7 +4,8 @@
 @import 'application/notification';
 @import 'application/nav';
 @import 'application/header';
-@import 'application/tooltip';
+// temporarily removing tooltip.scss as there is a bug with the CSS triangle component
+// @import 'application/tooltip';
 @import 'application/footer';
 
 @import 'application/home/summary';
