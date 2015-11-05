@@ -1,5 +1,4 @@
-class Admin::AboutController < ApplicationController
-  layout "administrator"
+class Admin::AboutController < AdminController
   before_action :set_about
 
   def edit
