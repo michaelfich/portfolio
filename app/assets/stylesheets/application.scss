@@ -1,5 +1,6 @@
 @import 'style';
 
+@import 'application/body';
 @import 'application/notification';
 @import 'application/nav';
 @import 'application/header';
@@ -20,12 +21,3 @@
 
 @import 'application/components/pagination';
 @import 'application/components/ribbon';
-
-body {
-  @include media($medium-screen-down) {
-    padding-top: 40px;
-  }
-  @include media($large-screen-up) {
-    border-top: 10px solid shade($action-color, 20%);
-  }
-}

@@ -1,0 +1,8 @@
+body {
+  @include media($medium-screen-down) {
+    padding-top: 40px;
+  }
+  @include media($large-screen-up) {
+    border-top: 10px solid shade($action-color, 20%);
+  }
+}
