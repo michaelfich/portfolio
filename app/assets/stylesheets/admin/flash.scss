@@ -7,7 +7,7 @@ div.flash-notice,
 div.flash-success {
   background-color: $light-gray;
   border-bottom: 1px solid $dark-gray;
-  color: $dark-gray;
+  color: #ffffff;
   text-align: center;
   padding-top: 0.75rem;
   padding-bottom: 0.75rem;
@@ -16,19 +16,19 @@ div.flash-success {
 
 div.flash-alert {
   border-color: shade($alert-color, 20%);
-  color: shade($alert-color, 20%);
+  // color: shade($alert-color, 20%);
   background-color: lighten($alert-color, 20%);
 }
 
 div.flash-notice {
   border-color: shade($notice-color, 20%);
-  color: shade($notice-color, 20%);
+  // color: shade($notice-color, 20%);
   background-color: lighten($notice-color, 20%);
 }
 
 div.flash-success {
   border-color: shade($success-color, 20%);
-  color: shade($success-color, 20%);
+  // color: shade($success-color, 20%);
   background-color: lighten($success-color, 20%);
 }
 
