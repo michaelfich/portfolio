@@ -20,5 +20,8 @@
   </div>
   <div class="field">
     <%= f.button "Save" %>
+    <% unless @blog.new_record? %>
+      <%= link_to "Delete Blog Post", admin_blog_path, method: :delete %>
+    <% end %>
   </div>
 <% end %>
