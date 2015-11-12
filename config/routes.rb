@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-
   root to: 'pages#home'
 
   resources :projects, only: [:index, :show], param: :slug
@@ -20,6 +19,7 @@ Rails.application.routes.draw do
     resources :users, param: :login, only: [:index, :show]
     resources :blogs, param: :slug
     resources :projects, param: :slug
+    resources :comments, exclude: [:new, :create]
     get 'about/edit'
     patch 'about/update'
   end
