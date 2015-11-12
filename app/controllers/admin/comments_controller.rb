@@ -1,7 +1,9 @@
 class Admin::CommentsController < AdminController
   before_filter :is_admin?
+  before_action :set_comment, only: [:show, :edit, :update, :destroy]
 
   def index
+    @comments = Comment.all.page(params[:page]).per(10)
   end
 
   def show
@@ -11,5 +13,10 @@ class Admin::CommentsController < AdminController
   end
 
   def delete
+  end
+
+  private
+  def set_comment
+    @comment = Comment.find(params['id'])
   end
 end

@@ -1,2 +1,9 @@
-<h1>Admin::Comments#index</h1>
-<p>Find me in app/views/admin/comments/index.html.erb</p>
+<h3>Comments</h3>
+
+<% if @comments.any? %>
+  <ul>
+    <% @comments.each do |comment| %>
+      <li><%= comment.user.name %>: <%= comment.comment %></li>
+    <% end %>
+  </ul>
+<% end %>
