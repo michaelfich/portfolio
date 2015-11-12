@@ -1,11 +1,11 @@
 <div class="errors-container">
-  <% if @user.errors.any? %>
+  <% if @user && @user.errors.any? %>
     <h3>Unable to sign in.</h3>
 
     <ul class="errors">
-      <% @user.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
+      <%# @user.errors.full_messages.each do |message| %>
+        <!-- <li><%#= message %></li> -->
+      <%# end %>
     </ul>
   <% else %>
     <h3>Successfully logged in.</h3>
