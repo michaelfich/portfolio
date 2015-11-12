@@ -17,6 +17,7 @@ Rails.application.routes.draw do
   resources :admin, only: :index
 
   namespace :admin do
+    resources :users, param: :login, only: [:index, :show]
     resources :blogs, param: :slug
     resources :projects, param: :slug
     get 'about/edit'

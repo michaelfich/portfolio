@@ -1,0 +1,11 @@
+<h3>Users</h3>
+
+<% unless @users.blank? %>
+  <ul>
+    <% @users.each do |user| %>
+      <li><%= link_to user, admin_user_path(user) %></li>
+    <% end %>
+  </ul>
+<% else %>
+  <p>No users have yet signed up on michaelfich.com.  Spread the word.</p>
+<% end %>

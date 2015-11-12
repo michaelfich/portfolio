@@ -11,4 +11,12 @@ class User < ActiveRecord::Base
 
   has_many :blogs
   has_many :comments
+
+  def to_param
+    login
+  end
+
+  def to_s
+    name
+  end
 end

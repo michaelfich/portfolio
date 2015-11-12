@@ -1,0 +1,20 @@
+<h3><%= @user.name %></h3>
+
+<ul>
+  <li>
+    <% if @user.login %>
+      <strong>Username:</strong>
+      <%= @user.login %>
+    <% end %>
+  </li>
+  <li>
+    <% if @user.email %>
+      <strong>Email:</strong>
+      <%= @user.email %>
+    <% end %>
+  </li>
+  <li>
+    <strong>Signed Up:</strong>
+    <%= @user.created_at.strftime("%B %e, %Y") %>
+  </li>
+</ul>
