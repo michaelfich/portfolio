@@ -6,7 +6,7 @@ class CommentsController < ApplicationController
     @comment.user = current_user
 
     if @comment.save
-      redirect_to blog_url(@blog) + "#comments", notice: 'Comment saved!'
+      redirect_to blog_url(@blog) + "\##{@comment.id}", notice: 'Comment saved!'
     else
       redirect_to blog_url(@blog) + "#comments", alert: 'There was an error saving your comment'
     end

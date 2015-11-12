@@ -11,7 +11,7 @@
     <div class="comment-list">
       <% if @comments.any? %>
         <% @comments.each do |post| %>
-          <div class="comment">
+          <div class="comment" id="<%= post.id %>">
             <div class="avatar">
               <%= image_tag post.user.avatar %>
             </div>

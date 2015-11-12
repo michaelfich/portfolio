@@ -2,13 +2,13 @@
 
 <ul>
   <li>
-    <% if @user.login %>
+    <% unless @user.login.blank? %>
       <strong>Username:</strong>
       <%= @user.login %>
     <% end %>
   </li>
   <li>
-    <% if @user.email %>
+    <% unless @user.email.blank? %>
       <strong>Email:</strong>
       <%= @user.email %>
     <% end %>
