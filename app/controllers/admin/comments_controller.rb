@@ -3,7 +3,7 @@ class Admin::CommentsController < AdminController
   before_action :set_comment, only: [:show, :edit, :update, :destroy]
 
   def index
-    @comments = Comment.all.page(params[:page]).per(10)
+    @comments = Comment.order(created_at: :desc).page(params[:page]).per(10)
   end
 
   def show

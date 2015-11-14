@@ -1,4 +1,6 @@
 @import 'style';
+@import 'user';
+@import 'comments';
 
 @import 'application/body';
 @import 'application/notification';
@@ -18,9 +20,6 @@
 @import 'application/pages/projects';
 @import 'application/pages/project';
 @import 'application/pages/contact';
-@import 'application/pages/comments';
 
 @import 'application/components/pagination';
 @import 'application/components/ribbon';
-
-@import 'user';

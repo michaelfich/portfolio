@@ -27,15 +27,15 @@
     <nav>
       <ul>
         <li>
-          <%= link_to root_url do %>
-            <i class="fa fa-home"></i>
-            <span>Home</span>
-          <% end %>
-        </li>
-        <li>
           <%= link_to admin_users_path do %>
             <i class="fa fa-users"></i>
             <span>Users</span>
+          <% end %>
+        </li>
+        <li>
+          <%= link_to admin_comments_path do %>
+            <i class="fa fa-comment"></i>
+            <span>Comments</span>
           <% end %>
         </li>
         <li>

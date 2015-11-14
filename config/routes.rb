@@ -19,7 +19,7 @@ Rails.application.routes.draw do
     resources :users, param: :login, only: [:index, :show]
     resources :blogs, param: :slug
     resources :projects, param: :slug
-    resources :comments, exclude: [:new, :create]
+    resources :comments, except: [:new, :create]
     get 'about/edit'
     patch 'about/update'
   end
