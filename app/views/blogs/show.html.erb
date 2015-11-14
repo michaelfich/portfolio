@@ -10,19 +10,7 @@
 
     <div class="comment-list">
       <% if @comments.any? %>
-        <% @comments.each do |post| %>
-          <div class="comment" id="<%= post.id %>">
-            <div class="avatar">
-              <%= image_tag post.user.avatar %>
-            </div>
-            <div class="content">
-              <%= post.comment %>
-              <footer>
-                Posted by <%= post.user.name %> on <%= post.created_at.in_time_zone("Eastern Time (US & Canada)").strftime("%B %e, %Y") %>
-              </footer>
-            </div>
-          </div>
-        <% end %>
+        <%= render partial: 'shared/comment', collection: @comments %>
       <% else %>
         <p>Be the first to comment on this blog!</p>
       <% end %>

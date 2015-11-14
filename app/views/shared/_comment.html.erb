@@ -1,0 +1,12 @@
+<div class="comment" id="<%= comment.id %>">
+  <div class="avatar">
+    <%= image_tag comment.user.avatar %>
+  </div>
+  <div class="content">
+    <%= comment.comment %>
+    <footer>
+      Posted by <%= comment.user.name %>
+      on <%= comment.created_at.in_time_zone("Eastern Time (US & Canada)").strftime("%B %e, %Y") %>
+    </footer>
+  </div>
+</div>
