@@ -6,7 +6,11 @@ class BlogsController < ApplicationController
   def show
     @blog = Blog.find_by(slug: params[:slug])
     if @blog && @blog.published
-      @comments = Comment.where(blog_id: @blog.id)
+      @comments = if current_user && current_user.admin?
+        @blog.comments
+      else
+        @blog.comments.where(show: true)
+      end
       @comment = Comment.new
     else
       flash[:alert] = "Unable to find the requested blog post."
