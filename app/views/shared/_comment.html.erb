@@ -8,5 +8,12 @@
       Posted by <%= comment.user.name %>
       on <%= comment.created_at.in_time_zone("Eastern Time (US & Canada)").strftime("%B %e, %Y") %>
     </footer>
+    <% if current_user && current_user.admin? %>
+      <ul class="actions">
+        <li><%= link_to "Spam", "#" if current_user.admin? %></li>
+        <li><%= link_to "Edit", "#" %></li>
+        <li><%= link_to "Delete", "#" %></li>
+      </ul>
+    <% end %>
   </div>
 </div>
