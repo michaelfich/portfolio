@@ -12,7 +12,11 @@
       <ul class="actions">
         <li><%= link_to "Spam", "#" if current_user.admin? %></li>
         <li><%= link_to "Edit", "#" %></li>
-        <li><%= link_to "Delete", "#" %></li>
+        <% if comment.show %>
+          <li><%= link_to "Hide", admin_comment_path(comment), method: :delete %></li>
+        <% else %>
+          <li><%= link_to "Show", admin_comment_path(comment), method: :delete %></li>
+        <% end %>
       </ul>
     <% end %>
   </div>

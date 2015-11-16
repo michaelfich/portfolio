@@ -12,7 +12,10 @@ class Admin::CommentsController < AdminController
   def update
   end
 
-  def delete
+  def destroy
+    @comment.show = !@comment.show
+    @comment.save
+    redirect_to :back
   end
 
   private
