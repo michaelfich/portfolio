@@ -16,19 +16,16 @@ div.flash-success {
 
 div.flash-alert {
   border-color: shade($alert-color, 20%);
-  // color: shade($alert-color, 20%);
-  background-color: lighten($alert-color, 20%);
+  background-color: $alert-color;
 }
 
 div.flash-notice {
   border-color: shade($notice-color, 20%);
-  // color: shade($notice-color, 20%);
-  background-color: lighten($notice-color, 20%);
+  background-color: $notice-color;
 }
 
 div.flash-success {
   border-color: shade($success-color, 20%);
-  // color: shade($success-color, 20%);
-  background-color: lighten($success-color, 20%);
+  background-color: $success-color;
 }
 
