@@ -6,26 +6,25 @@ div.flash-alert,
 div.flash-notice,
 div.flash-success {
   background-color: $light-gray;
-  border-bottom: 1px solid $dark-gray;
   color: #ffffff;
   text-align: center;
   padding-top: 0.75rem;
   padding-bottom: 0.75rem;
   font-size: 0.9rem;
+  position: absolute;
+  top: 0;
+  width: 100%;
 }
 
 div.flash-alert {
-  border-color: shade($alert-color, 20%);
-  background-color: $alert-color;
+  background-color: shade($alert-color, 10%);
 }
 
 div.flash-notice {
-  border-color: shade($notice-color, 20%);
-  background-color: $notice-color;
+  background-color: shade($notice-color, 10%);
 }
 
 div.flash-success {
-  border-color: shade($success-color, 20%);
-  background-color: $success-color;
+  background-color: shade($success-color, 10%);
 }
 
