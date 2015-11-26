@@ -1,0 +1,11 @@
+<div class="resources">
+  <h3>Resources</h3>
+
+  <% if @resources.any? %>
+    <ul>
+      <% @resources.each do |resource| %>
+        <li><%= resource %></li>
+      <% end %>
+    </ul>
+  <% end %>
+</div>

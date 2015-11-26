@@ -8,5 +8,6 @@ class PagesController < ApplicationController
   end
 
   def resources
+    @resources = Resource.all
   end
 end

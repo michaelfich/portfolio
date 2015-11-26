@@ -8,6 +8,7 @@ Rails.application.routes.draw do
 
   get 'about' => 'pages#about', as: :about
   get 'portfolio' => 'pages#portfolio', as: :portfolio
+  get 'resources' => 'pages#resources', as: :resources
 
   get 'oauth/callback' => 'oauths#callback'
   get 'oauth/:provider' => 'oauths#oauth', as: :auth_at_provider
