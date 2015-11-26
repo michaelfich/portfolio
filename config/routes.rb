@@ -18,6 +18,7 @@ Rails.application.routes.draw do
 
   namespace :admin do
     resources :users, param: :login, only: [:index, :show]
+    resources :resource, param: :slug
     resources :blogs, param: :slug
     resources :projects, param: :slug
     resources :comments, except: [:new, :create]
