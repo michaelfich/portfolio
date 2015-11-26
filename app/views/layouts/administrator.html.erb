@@ -18,49 +18,11 @@
       <aside>
         Currently logged in as <%= current_user.name %>.  <%= link_to "Logout", :logout_user  %>
       </aside>
-    <% else %>
-      <aside>
-        Not currently logged in.
-      </aside>
     <% end %>
 
-    <nav>
-      <ul>
-        <li>
-          <%= link_to admin_users_path do %>
-            <i class="fa fa-users"></i>
-            <span>Users</span>
-          <% end %>
-        </li>
-        <li>
-          <%= link_to admin_comments_path do %>
-            <i class="fa fa-comment"></i>
-            <span>Comments</span>
-          <% end %>
-        </li>
-        <li>
-          <%= link_to admin_about_edit_path do %>
-            <i class="fa fa-user"></i>
-            <span>About</span>
-          <% end %>
-        </li>
-        <li>
-          <%= link_to admin_projects_path do %>
-            <i class="fa fa-folder-open"></i>
-            <span>Projects</span>
-          <% end %>
-        </li>
-        <li>
-          <%= link_to admin_blogs_path do %>
-            <i class="fa fa-book"></i>
-            <span>Blogs</span>
-          <% end %>
-        </li>
-      </ul>
-    </nav>
+    <%= render partial: 'admin/navbar' %>
 
     <%= yield %>
-    <%#= render partial: 'shared/footer' %>
   </div>
 
 </body>
