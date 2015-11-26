@@ -1,6 +1,4 @@
 class Admin::UsersController < AdminController
-  before_filter :is_admin?
-
   def index
     @users = User.all
   end

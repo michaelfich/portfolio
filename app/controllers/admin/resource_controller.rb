@@ -1,5 +1,6 @@
-class Admin::ResourceController < ApplicationController
+class Admin::ResourceController < AdminController
   def index
+    @resource = Resource.all
   end
 
   def new
