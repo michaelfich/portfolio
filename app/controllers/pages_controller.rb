@@ -6,4 +6,7 @@ class PagesController < ApplicationController
   def about
     @about = Content.where(name: 'about').first
   end
+
+  def resources
+  end
 end
