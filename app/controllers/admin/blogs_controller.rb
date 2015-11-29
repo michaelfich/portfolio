@@ -12,7 +12,8 @@ class Admin::BlogsController < AdminController
 
   def create
     @blog = Blog.new(blog_params)
-    @blog.published_at = Time.now
+    @blog.published_at = Time.now if @blog.published?
+
     if @blog.save
       flash[:success] = "Saved blog \"#{@blog.title}\""
       redirect_to admin_blogs_path
@@ -27,6 +28,8 @@ class Admin::BlogsController < AdminController
 
   def update
     @blog.update(blog_params)
+    @blog.published_at = Time.now if @blog.changed.include?("published") && @blog.published
+
     if @blog.save
       flash[:success] = "Saved blog \"#{@blog.title}\""
       redirect_to admin_blogs_path

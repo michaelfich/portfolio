@@ -10,7 +10,7 @@ class OauthsController < ApplicationController
     provider = auth_params[:provider]
     if @user = login_from(provider)
       if @user.admin
-        redirect_back_or_to admin_index_url, success: "Logged in from #{provider.titleize}!"
+        redirect_back_or_to admin_index_url
       else
         redirect_back_or_to root_path, success: "Logged in from #{provider.titleize}!"
       end

@@ -1,4 +1,4 @@
-class Admin::ResourceController < AdminController
+class Admin::ResourcesController < AdminController
   def index
     @resource = Resource.all
   end
