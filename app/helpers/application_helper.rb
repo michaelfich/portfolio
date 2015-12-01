@@ -1,14 +1,13 @@
 module ApplicationHelper
   def markdown(text)
-    render = Redcarpet::Render::HTML.new({
+    render_options = {
       filter_html: true,
-      link_attributes: {
-          target: '_blank'
-      },
-      no_images: false
-    })
+      link_attributes: { target: '_blank' },
+      no_images: false,
+      hard_wrap: true
+    }
 
-    extensions = {
+    markdown_options = {
       no_intra_emphasis: true,
       highlight: true,
       space_after_headers: true,
@@ -16,6 +15,7 @@ module ApplicationHelper
       underline: true
     }
 
-    Redcarpet::Markdown.new(renderer, extensions)
+    renderer = Redcarpet::Render::HTML.new(render_options)
+    Redcarpet::Markdown.new(renderer, markdown_options).render(text).html_safe
   end
 end
