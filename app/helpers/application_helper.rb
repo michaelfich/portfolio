@@ -1,6 +1,6 @@
 module ApplicationHelper
   class HTML_Highlighter < Redcarpet::Render::HTML
-    def block(code, language)
+    def block_code(code, language)
       Pygments.highlight(code, lexer: language)
     end
   end
