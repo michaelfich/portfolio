@@ -1,12 +1,11 @@
 source 'https://rubygems.org'
 
-gem 'rails', '4.2.2'
+gem 'rails', '5.0.0'
 gem 'pg'
 gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
 gem 'jquery-rails'
 gem 'turbolinks'
-gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'redcarpet', '~> 3.3.3'
 gem 'pygments.rb', '~> 0.6.3'
@@ -16,17 +15,16 @@ gem 'autoprefixer-rails'
 gem 'bourbon'
 gem 'neat'
 gem 'font-awesome-sass'
-gem 'kaminari', '~> 0.16.3'
-gem 'paperclip', '~> 4.3.1'
+gem 'kaminari'
+gem 'paperclip'
 gem 'puma'
 
 group :development, :test do
-  gem 'byebug'
-  gem 'web-console', '~> 2.0'
+  gem 'web-console'
+  gem 'listen', '~> 3.0.5'
   gem 'spring'
-
+  gem 'spring-watcher-listen', '~> 2.0.0'
   gem 'pry-rails', '~> 0.3.4'
-  gem 'quiet_assets', '~> 1.1.0'
 end
 
 group :development do
