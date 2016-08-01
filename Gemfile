@@ -5,7 +5,7 @@ gem 'pg'
 gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
 gem 'jquery-rails'
-gem 'turbolinks'
+gem 'turbolinks', '~> 5'
 gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'redcarpet', '~> 3.3.3'
 gem 'pygments.rb', '~> 0.6.3'
