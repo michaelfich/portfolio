@@ -1,78 +1,94 @@
 footer.main {
+  background: $dark-gray;
   margin-top: 3em;
   padding: 2.5em 0 5em;
-  background: $dark-gray;
+
   div {
     @include outer-container;
     @include media($medium-screen-down) {
-      padding: 0 1rem;
       margin: 0 0 3rem;
+      padding: 0 1rem;
     }
+
     @include media($medium-screen-down) {
       aside > header {
         padding-top: 1.5rem;
       }
     }
+
     @include media($medium-screen-only) {
-      padding: 0;
-      width: 400px;
       margin-left: auto;
       margin-right: auto;
+      padding: 0;
+      width: 400px;
     }
+
     @include media($large-screen-up) {
       section { @include span-columns(6 of 12); }
       aside   { @include span-columns(3 of 12); }
     }
+
     color: $light-gray;
+
     section {
       color: lighten($dark-gray, 15%);
+
       h1 {
         font-size: 3em;
         margin-bottom: 0;
       }
+
       h2 {
         font-size: 1.25em;
         font-weight: 700;
+        margin-top: 6px;
+        margin-bottom: 0;
       }
+
       @include media($small-screen-only) {
         h1 {
           font-size: 2em;
         }
+
         h2 {
           font-size: 1.15em;
         }
       }
     }
+
     header {
-      font-size: 0.85rem;
-      text-transform: uppercase;
-      font-weight: bold;
       color: $medium-gray;
-      margin-bottom: 0.5rem;
+      font-size: .85rem;
+      font-weight: bold;
+      margin-bottom: .5rem;
+      text-transform: uppercase;
     }
     a {
-      @include transition(all 0.5s ease);
-      display: inline-block;
-      margin: 0.2em 0 0.2em -11px;
+      @include transition(all .5s ease);
+
       border-left: 3px solid transparent;
-      padding: 2px 8px;
       color: $light-gray;
-      font-size: 0.85rem;
+      display: inline-block;
+      font-size: .85rem;
+      margin: .2em 0 .2em -11px;
+      padding: 2px 8px;
+
       &:hover {
-        color: $light-gray;
         border-left: 3px solid $light-gray;
+        color: $light-gray;
       }
     }
+
     aside.contact {
       i {
         display: inline-block;
-        width: 1em;
+        margin-right: .25rem;
         text-align: center;
-        margin-right: 0.25rem;
+        width: 1em;
       }
     }
     section p {
-      font-size: 0.85rem;
+      font-size: .85rem;
     }
   }
 }
