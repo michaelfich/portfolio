@@ -20,6 +20,14 @@ gem 'kaminari'
 gem 'paperclip'
 gem 'puma'
 
+group :development do
+  gem 'capistrano', '~> 3.4.0', require: false
+  gem 'capistrano-rails', '~> 1.1.3', require: false
+  gem 'capistrano-bundler', '~> 1.1', require: false
+  gem 'capistrano-rbenv', "~> 2.0", require: false
+  gem 'capistrano3-puma', '~> 1.2', require: false
+end
+
 group :development, :test do
   gem 'web-console'
   gem 'listen', '~> 3.0.5'
@@ -28,10 +36,8 @@ group :development, :test do
   gem 'pry-rails', '~> 0.3.4'
 end
 
-group :development do
-  gem 'capistrano', '~> 3.4.0', require: false
-  gem 'capistrano-rails', '~> 1.1.3', require: false
-  gem 'capistrano-bundler', '~> 1.1', require: false
-  gem 'capistrano-rbenv', "~> 2.0", require: false
-  gem 'capistrano3-puma', '~> 1.2', require: false
+group :test, :ci do
+  gem 'rubocop', '~> 0.41.2'
+  gem 'rspec-rails', '~> 3.5', '>= 3.5.1'
+  gem 'factory_girl_rails', '~> 4.7'
 end

@@ -1,0 +1,15 @@
+AllCops:
+  Exclude:
+    - bin/**/*
+    - db/**/*
+    - vendor/**/*
+    - Gemfile
+  DisplayCopNames: true
+  DisplayStyleGuide: true
+  TargetRubyVersion: 2.2
+BlockComments:
+  Enabled: false
+Documentation:
+  Enabled: false
+LineLength:
+  Max: 120
