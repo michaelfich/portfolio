@@ -1,5 +1,5 @@
-# Michael Fich
+# [Michael Fich](http://michaelfich.com)
 
-## Full Stack Web Developer
+[![Build Status](https://travis-ci.org/michaelfich/portfolio.svg?branch=master)](https://travis-ci.org/michaelfich/portfolio)
 
-This repository is the code used to develop my personal website, hosted at http://michaelfich.com
+Personal website which includes my blog, portfolio of projects, and other content which I publish.
