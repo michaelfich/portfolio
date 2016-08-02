@@ -4,11 +4,11 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
   before_action :recent_blogs
 
-  def is_admin?
+  def admin?
     if current_user
-      raise "You are not authorized to view this page" unless current_user.admin?
+      raise 'You are not authorized to view this page' unless current_user.admin?
     else
-      redirect_to auth_at_provider_path("github")
+      redirect_to auth_at_provider_path('github')
     end
   end
 

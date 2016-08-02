@@ -1,4 +1,5 @@
 module ApplicationHelper
+  # rubocop:disable Style/ClassAndModuleCamelCase
   class HTML_Highlighter < Redcarpet::Render::HTML
     def block_code(code, language)
       Pygments.highlight(code, lexer: language)

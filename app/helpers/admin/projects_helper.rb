@@ -1,2 +1,4 @@
-module Admin::ProjectsHelper
+module Admin
+  module ProjectsHelper
+  end
 end

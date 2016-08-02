@@ -1,2 +1,4 @@
-module Admin::ResourceHelper
+module Admin
+  module ResourceHelper
+  end
 end

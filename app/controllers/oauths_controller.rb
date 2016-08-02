@@ -4,9 +4,10 @@ class OauthsController < ApplicationController
     login_at(params[:provider])
   end
 
+  # rubocop:disable Metrics/AbcSize
   def callback
     provider = auth_params[:provider]
-    if @user = login_from(provider)
+    if @user = login_from(provider) # rubocop:disable Lint/AssignmentInCondition
       if @user.admin
         redirect_back_or_to admin_index_url
       else
@@ -15,7 +16,6 @@ class OauthsController < ApplicationController
     else
       begin
         @user = create_from(provider)
-        binding.pry
         reset_session
         auto_login(@user)
         redirect_back_or_to root_path, success: "Registered from #{provider.titleize}!"
@@ -27,10 +27,11 @@ class OauthsController < ApplicationController
 
   def signout
     logout
-    redirect_back_or_to root_path, notice: "Logged out"
+    redirect_back_or_to root_path, notice: 'Logged out'
   end
 
   private
+
   def auth_params
     params.permit(:code, :provider)
   end

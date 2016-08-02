@@ -6,7 +6,7 @@ class User < ActiveRecord::Base
 
   attr_accessor :username
 
-  has_many :authentications, :dependent => :destroy
+  has_many :authentications, dependent: :destroy
   accepts_nested_attributes_for :authentications
 
   has_many :blogs

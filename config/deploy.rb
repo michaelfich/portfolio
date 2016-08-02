@@ -1,3 +1,5 @@
+# rubocop:disable Metrics/LineLength
+
 # config valid only for current version of Capistrano
 lock '3.4.1'
 
@@ -15,8 +17,10 @@ set :scm, :git
 
 set :rbenv_type, :user
 set :rbenv_ruby, '2.3.1'
-set :rbenv_prefix, "RBENV_ROOT=#{fetch(:rbenv_path)} RBENV_VERSION=#{fetch(:rbenv_ruby)} #{fetch(:rbenv_path)}/bin/rbenv exec"
-set :rbenv_map_bins, %w{rake gem bundle ruby rails}
+set :rbenv_prefix, "RBENV_ROOT=#{fetch(:rbenv_path)} " \
+                   "RBENV_VERSION=#{fetch(:rbenv_ruby)} " \
+                   "#{fetch(:rbenv_path)}/bin/rbenv exec"
+set :rbenv_map_bins, %w(rake gem bundle ruby rails)
 
 # set :rvm_type, :user                     # Defaults to: :auto
 # set :rvm_ruby_version, '2.2.1'           # Defaults to: 'default'
@@ -35,10 +39,10 @@ set :format, :pretty
 # set :linked_files, fetch(:linked_files, []).push('config/database.yml', 'config/secrets.yml')
 
 # Default value for linked_dirs is []
-# set :linked_dirs, fetch(:linked_dirs, []).push('log', 'tmp/pids', 'tmp/cache', 'tmp/sockets', 'vendor/bundle', 'public/system')
+# set :linked_dirs, fetch(:linked_dirs, []) .push('log', 'tmp/pids', 'tmp/cache', 'tmp/sockets', 'vendor/bundle', 'public/system')
 
-set :linked_files, %w{config/database.yml config/secrets.yml config/application.yml}
-set :linked_dirs, %w{bin log tmp/pids tmp/cache tmp/sockets vendor/bundle public/system}
+set :linked_files, %w(config/database.yml config/secrets.yml config/application.yml)
+set :linked_dirs, %w(bin log tmp/pids tmp/cache tmp/sockets vendor/bundle public/system)
 
 # Default value for default_env is {}
 # set :default_env, { path: "/opt/ruby/bin:$PATH" }
@@ -47,7 +51,6 @@ set :linked_dirs, %w{bin log tmp/pids tmp/cache tmp/sockets vendor/bundle public
 set :keep_releases, 3
 
 namespace :deploy do
-
   desc 'Initial Deploy'
   task :initial do
     on roles(:app) do
@@ -64,5 +67,4 @@ namespace :deploy do
       # end
     end
   end
-
 end

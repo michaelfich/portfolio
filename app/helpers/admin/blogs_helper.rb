@@ -1,2 +1,4 @@
-module Admin::BlogsHelper
+module Admin
+  module BlogsHelper
+  end
 end

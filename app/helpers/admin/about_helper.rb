@@ -1,2 +1,4 @@
-module Admin::AboutHelper
+module Admin
+  module AboutHelper
+  end
 end
