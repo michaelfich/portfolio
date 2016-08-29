@@ -32,37 +32,44 @@
       }
     }
   }
+
   h1 {
+    font-family: $heading-font-family;
     font-size: 2.5rem;
+    font-weight: 900;
     letter-spacing: -1px;
     margin: 0;
-    font-family: $heading-font-family;
-    font-weight: 900;
+
     a {
       color: $dark-gray;
     }
   }
+
   h2 {
     margin: 0;
     font-size: 1.1rem;
     font-weight: 500;
   }
+
   @include media($medium-screen-down) {
     margin: 3em 0;
+
     .avatar {
-      display: block;
-      width: 10em;
-      margin: 0.5em auto 0.5em;
+      background-color: #fff;
+      border: 1px solid $dark-gray;
       border-radius: 100%;
+      display: block;
+      margin: .5em auto;
       padding: 5px;
-      background-color: white;
-      border: 1px solid $medium-gray;
+      width: 10em;
     }
+
     h1, h2, .contact {
       @include span-columns(4 of 4);
       text-align: center;
     }
   }
+
   @include media($large-screen-up) {
     margin: 3em 0;
     .avatar {
