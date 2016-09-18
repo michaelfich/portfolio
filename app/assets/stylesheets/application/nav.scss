@@ -1,86 +1,97 @@
 // $contact-color: #4CAF50;
 $contact-color: $green;
 $menu-line-height: 3rem;
-$menu-font-color: #ffffff;
-$menu-font-size: 0.8rem;
+$menu-font-color: #fff;
+$menu-font-size: .8rem;
 
 .primary {
   @include clearfix;
   @include media($medium-screen-down) {
     .toggle {
-      width: 100%;
-      height: $menu-line-height;
-      line-height: $menu-line-height;
-      text-align: left;
-      position: fixed;
-      top: 0;
-      left: 0;
-      outline: none;
       background: $dark-gray;
-      z-index: 100;
       color: $menu-font-color;
+      height: $menu-line-height;
+      left: 0;
+      line-height: $menu-line-height;
+      outline: none;
+      position: fixed;
+      text-align: left;
+      top: 0;
+      width: 100%;
+      z-index: 100;
     }
+
     i {
       display: block;
-      text-align: center;
       float: left;
-      width: 20px;
       height: $menu-line-height;
       line-height: $menu-line-height;
       margin: 0 .5rem 0 1rem;
+      text-align: center;
+      width: 20px;
     }
+
     span {
       display: block;
       float: left;
-      text-transform: uppercase;
-      line-height: $menu-line-height;
-      height: $menu-line-height;
       font-size: $menu-font-size;
+      height: $menu-line-height;
+      line-height: $menu-line-height;
+      text-transform: uppercase;
     }
+
     ul {
       background: $dark-gray;
-      position: fixed;
       display: none;
-      z-index: 50;
-      top: 0;
       left: 0;
       padding-top: $menu-line-height;
+      position: fixed;
+      top: 0;
       width: 100%;
+      z-index: 50;
+
       li {
         a {
+          background: lighten($dark-gray, 5%);
+          color: $menu-font-color;
           display: block;
           height: $menu-line-height;
           line-height: $menu-line-height;
-          background: lighten($dark-gray, 5%);
-          text-transform: uppercase;
-          color: $menu-font-color;
           margin-bottom: 1px;
+          text-transform: uppercase;
         }
       }
     }
   }
+
   @include media($large-screen-up) {
     position: absolute;
-    top: 0;
     right: 0;
+    top: 0;
+
     .toggle {
       display: none;
     }
+
     ul {
       float: right;
       line-height: 1em;
+
       li {
         display: inline-block;
+
         a {
           display: block;
-          padding: 0.65em;
           margin-left: 2px;
+          padding: .65em 6px;
+
           span {
-            font-size: 0.75em;
+            font-size: .75em;
             font-weight: bold;
             text-transform: uppercase;
           }
         }
+
         @include media($large-screen-up) {
           &.contact {
             a {
