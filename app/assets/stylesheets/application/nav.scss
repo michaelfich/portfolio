@@ -95,15 +95,16 @@ $menu-font-size: .8rem;
         @include media($large-screen-up) {
           &.contact {
             a {
-              color: $contact-color;
-              display: block;
-              padding: 0.65em 1.3em;
-              outline: none;
               background: $contact-color;
               color: $menu-font-color;
+              display: block;
+              outline: none;
+              padding: .65em 1.3em;
+
               &:hover {
                 background: lighten($contact-color, 5%);
               }
+
               i {
                 display: none;
               }
